@@ -19,5 +19,7 @@ Imports:
     scales (>= 1.1.0),
     ggtext (>= 0.1.0)
 RoxygenNote: 7.0.0
-Remotes:  
+Remotes: 
     clauswilke/ggtext
+URL: https://github.com/petrbouchal/ptrr
+BugReports: https://github.com/petrbouchal/ptrr/issues
