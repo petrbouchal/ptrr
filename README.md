@@ -7,51 +7,34 @@
 
 <!-- badges: end -->
 
-The goal of ptrr is to …
+This is a package for personal utilities.
 
 ## Installation
 
-You can install the released version of ptrr from
-[CRAN](https://CRAN.R-project.org) with:
+You can install the latest release of ptrr from
+[Github](https://github.com) with:
 
 ``` r
-install.packages("ptrr")
+devtools::install_github("petrbouchal/ptrr", ref = github_release())
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+The current development version is at
 
 ``` r
-library(ptrr)
-## basic example code
+devtools::install_github("petrbouchal/ptrr")
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+There are also binaries in the `petrbouchal/drat` repo; this can be
+installed with
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+install.packages("ptrr", repos = "https://petrbouchal.github.io/drat")
+#> 
+#> The downloaded binary packages are in
+#>  /var/folders/c8/pj33jytj233g8vr0tw4b2h7m0000gn/T//Rtmp0u6GCg/downloaded_packages
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
-
-## Include
+## TODO
 
   - rounding function
     <https://twitter.com/hspter/status/314858331598626816>

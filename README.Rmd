@@ -18,42 +18,30 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of ptrr is to ...
+This is a package for personal utilities.
 
 ## Installation
 
-You can install the released version of ptrr from [CRAN](https://CRAN.R-project.org) with:
+You can install the latest release of ptrr from [Github](https://github.com) with:
 
 ``` r
-install.packages("ptrr")
+devtools::install_github("petrbouchal/ptrr", ref = github_release())
 ```
 
-## Example
+The current development version is at
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(ptrr)
-## basic example code
+``` r
+devtools::install_github("petrbouchal/ptrr")
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+There are also binaries in the `petrbouchal/drat` repo; this can be installed with
 
-```{r cars}
-summary(cars)
+```{r}
+install.packages("ptrr", repos = "https://petrbouchal.github.io/drat")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
 
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
-
-## Include
+## TODO
 
 - rounding function https://twitter.com/hspter/status/314858331598626816
 - Czech scales
