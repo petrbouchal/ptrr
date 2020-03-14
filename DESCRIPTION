@@ -1,6 +1,6 @@
 Package: ptrr
 Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person(given = "Petr",
            family = "Bouchal",
@@ -15,10 +15,16 @@ LazyData: true
 Imports: 
     showtext,
     sysfonts,
-    ggplot2,
+    ggplot2 (>= 3.3.0),
     scales (>= 1.1.0),
-    ggtext (>= 0.1.0)
-RoxygenNote: 7.0.0
+    ggtext (>= 0.1.0),
+    drat (>= 0.1.5),
+    git2r (>= 0.26.1),
+    pkgbuild (>= 1.0.6),
+    rhub (>= 1.1.1),
+    callr (>= 3.4.2),
+    devtools (>= 2.2.2)
+RoxygenNote: 7.1.0
 Remotes: 
     clauswilke/ggtext
 URL: https://github.com/petrbouchal/ptrr
