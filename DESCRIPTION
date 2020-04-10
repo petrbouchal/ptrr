@@ -7,25 +7,28 @@ Authors@R:
            role = c("aut", "cre"),
            email = "pbouchal@gmail.com",
            comment = c(ORCID = "0000-0002-0471-716X"))
-Description: A collection of personal utilities, themes and templates.
+Description: A collection of personal utilities, themes and
+    templates.
 License: MIT + file LICENSE
+URL: https://github.com/petrbouchal/ptrr
+BugReports: https://github.com/petrbouchal/ptrr/issues
+Imports: 
+    callr (>= 3.4.2),
+    devtools (>= 2.2.2),
+    drat (>= 0.1.5),
+    extrafont,
+    ggplot2 (>= 3.3.0),
+    ggtext (>= 0.1.0),
+    git2r (>= 0.26.1),
+    hrbrthemes (>= 0.8.0),
+    pkgbuild (>= 1.0.6),
+    rhub (>= 1.1.1),
+    scales (>= 1.1.0),
+    showtext,
+    sysfonts
+Remotes: 
+    clauswilke/ggtext
 Encoding: UTF-8
 Language: en
 LazyData: true
-Imports: 
-    showtext,
-    sysfonts,
-    ggplot2 (>= 3.3.0),
-    scales (>= 1.1.0),
-    ggtext (>= 0.1.0),
-    drat (>= 0.1.5),
-    git2r (>= 0.26.1),
-    pkgbuild (>= 1.0.6),
-    rhub (>= 1.1.1),
-    callr (>= 3.4.2),
-    devtools (>= 2.2.2)
 RoxygenNote: 7.1.0
-Remotes: 
-    clauswilke/ggtext
-URL: https://github.com/petrbouchal/ptrr
-BugReports: https://github.com/petrbouchal/ptrr/issues
