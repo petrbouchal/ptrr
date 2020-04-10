@@ -57,7 +57,7 @@ insert_package_into_drat <- function(pkg, last_tag = T,
     print(git2r::status())
   }
 
-  tryCatch({bin_build <- devtools::build(pkg, binary = T, args = c('--preclean'))
+  tryCatch({bin_build <- devtools::build(pkg, binary = T, args = c('--preclean'), vignettes = T, manual = T)
             drat::insertPackage(bin_build, repodir = repodir)}, error=function(e){})
 
   src_build <- devtools::build(pkg)
