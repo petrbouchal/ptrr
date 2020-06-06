@@ -1,0 +1,4 @@
+name: invoice
+description: >
+   An invoice template
+create_dir: FALSE
