@@ -23,6 +23,7 @@
 #' format_date_human(date = c(lubridate::now(),
 #'                            lubridate::now() - 100000),
 #'                   month_format = "short", locale = "fr_FR", day_dot = F)
+#' @export
 format_date_human <- function(date = lubridate::now(),
                               month_format = c("long", "short", "number"),
                               year_format = c("long", "short"),
