@@ -1,0 +1,6 @@
+-   id: no-view-statement
+    name: Detect View() statements
+    description: Detects View() statements.
+    entry: inst/bin/no-view-statements
+    language: R
+    types: '(\.R|\.Rmd|\.Rnw|\.r|\.rmd|\.rnw)$'
