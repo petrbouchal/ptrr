@@ -138,3 +138,23 @@ theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter"),
 #' @export
 "flush_axis" <- ggplot2::expansion(mult = c(0, 0.05))
 
+
+#' Set geom defaults for ptrr package/theme
+#'
+#' @param color color, defaults to "blue"
+#'
+#' @export
+set_geom_defaults <- function(color = "blue") {
+  ggplot2::update_geom_defaults(
+    "point", list(fill = color, color = color, size = 1.5)
+  )
+  ggplot2::update_geom_defaults(
+    "bar", list(fill = color, color = NA)
+  )
+  ggplot2::update_geom_defaults(
+    "rect", list(fill = color, color = NA)
+  )
+  ggplot2::update_geom_defaults(
+    "line", list(color = color, size = 1.5)
+  )
+}

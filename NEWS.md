@@ -5,6 +5,7 @@
 * new ggplot2 utilities: themes, axes
 * new number formatters
 * new font utilities
+* new function to set geom defaults
 
 # ptrr 0.1.0
 
