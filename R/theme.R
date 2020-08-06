@@ -1,5 +1,5 @@
 
-#' A Schola Empirica ggplot2 theme
+#' A custom ggplot2 theme
 #'
 #' A wrapper around `theme()` which provides several shortcuts to setting common options
 #' and several defaults. See more in Details.
@@ -36,7 +36,7 @@
 #' @examples
 #' library(ggplot2)
 #'
-#' # NB when `theme_schola()` is used in these examples, fonts
+#' # NB when `theme_ptrr()` is used in these examples, fonts
 #' # are set to 'sans' to pass checks on computers without the
 #' # sans included. If you have these fonts (see Note) you can
 #' # leave these parameters at their default values.
