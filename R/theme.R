@@ -47,7 +47,7 @@
 #'   geom_bar(aes(y = class)) +
 #'   labs(title = "Lots of cars", subtitle = "Count of numbers")
 #'
-#' # using `theme_schola()` defaults
+#' # using `theme_ptrr()` defaults
 #'
 #' p +
 #'   theme_schola("x", family = "sans", title_family = "sans")
@@ -83,7 +83,7 @@
 #'   theme(panel.background = element_rect(fill = "lightpink"))
 #'
 #' @export
-theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter"),
+theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter", "none"),
                          base_size = 11,
                          family = "Roboto Condensed",
                          title_family = "Roboto",
@@ -110,9 +110,9 @@ theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter"),
                    plot.subtitle = element_switch(),
                    plot.caption = element_switch(colour = "grey60"),
                    panel.grid.minor = ggplot2::element_blank(),
-                   panel.grid.major.x = if(grd != "y")
+                   panel.grid.major.x = if(!grd %in% c("y", "none"))
                      element_gridline else ggplot2::element_blank(),
-                   panel.grid.major.y = if(grd != "x")
+                   panel.grid.major.y = if(!grd %in% c("x", "none"))
                      element_gridline else ggplot2::element_blank(),
                    # axis.line = ggplot2::element_line(),
                    panel.background = ggplot2::element_rect(fill = bg_col,

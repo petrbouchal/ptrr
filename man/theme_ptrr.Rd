@@ -2,18 +2,19 @@
 % Please edit documentation in R/theme.R
 \name{theme_ptrr}
 \alias{theme_ptrr}
-\title{A Schola Empirica ggplot2 theme}
+\title{A custom ggplot2 theme}
 \usage{
 theme_ptrr(
-  gridlines = c("y", "x", "both", "scatter"),
+  gridlines = c("y", "x", "both", "scatter", "none"),
   base_size = 11,
   family = "Roboto Condensed",
   title_family = "Roboto",
   margin_side = 6,
   margin_bottom = 6,
   plot.title.position = "plot",
-  axis.title = ggplot2::element_blank(),
+  axis_titles = FALSE,
   multiplot = FALSE,
+  richtext = FALSE,
   ...
 )
 }
@@ -29,11 +30,11 @@ theme_ptrr(
 
 \item{plot.title.position}{where to align the title. Either "plot" (the default, difference from `theme()` default) or `"panel"`.}
 
-\item{axis.title}{same as in theme(), but with a default of `element_blank()`.}
-
 \item{multiplot}{if set to TRUE, provides better styling for small multiples created using `facet_*`.}
 
 \item{...}{Other parameters to be passed to `theme()`.}
+
+\item{axis.title}{same as in theme(), but with a default of `element_blank()`.}
 }
 \value{
 a ggtheme object
@@ -64,7 +65,7 @@ to be registered at package load.
 \examples{
 library(ggplot2)
 
-# NB when `theme_schola()` is used in these examples, fonts
+# NB when `theme_ptrr()` is used in these examples, fonts
 # are set to 'sans' to pass checks on computers without the
 # sans included. If you have these fonts (see Note) you can
 # leave these parameters at their default values.
@@ -75,7 +76,7 @@ p <- ggplot(mpg) +
   geom_bar(aes(y = class)) +
   labs(title = "Lots of cars", subtitle = "Count of numbers")
 
-# using `theme_schola()` defaults
+# using `theme_ptrr()` defaults
 
 p +
   theme_schola("x", family = "sans", title_family = "sans")
