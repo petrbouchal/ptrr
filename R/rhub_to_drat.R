@@ -47,6 +47,10 @@ rhub_binary <- function(check_object, download = TRUE) {
 insert_package_into_drat <- function(pkg, last_tag = T,
                                    repodir = getOption("dratRepo", default = "~/github/drat"),
                                    build_win = T) {
+
+  # note can use package_version() here for better sorting
+  # i.e. names(tags) %>% str_remove("^v") %>% package_version() %>% max()
+
   origwd <- getwd()
   setwd(pkg)
   if(last_tag) {
