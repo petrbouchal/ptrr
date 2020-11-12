@@ -1,0 +1,85 @@
+---
+title: "New site"
+---
+
+```{r setup, include=F}
+
+knitr::opts_chunk$set(fig.retina = 3, echo = F, eval = T,
+                      warning = F,
+                      out.width = "90%",
+                      dev = "ragg_png",
+                      fig.showtext = T,
+                      message = F)
+
+knitr::opts_knit$set()
+
+library(stringr)
+library(dplyr)
+library(ggplot2)
+library(czso)
+# library(CzechData)
+library(lubridate)
+library(ragg)
+library(ptrr)
+library(scales)
+library(fontawesome)
+library(tidyverse)
+
+Sys.setlocale("LC_TIME", "cs_CZ.UTF-8")
+
+ptrr::set_geom_defaults()
+update_geom_defaults("rect", list(fill = "blue"))
+```
+
+```{r fonts}
+sysfonts::font_add_google("IBM Plex Sans", "Roboto")
+sysfonts::font_add_google("IBM Plex Sans Condensed", "Roboto Condensed")
+```
+
+```{r metathis}
+library(metathis)
+
+meta() %>%
+  meta_description(
+    "Description"
+  ) %>% 
+  meta_name("github-repo" = "petrbouchal/...") %>% 
+  meta_viewport() %>% 
+  meta_social(
+    title = "Social title",
+    url = "https://petrbouchal.xyz/.../",
+    image = "https://petrbouchal.xyz/.../twitter_card_large.png",
+    image_alt = "Image alt",
+    og_type = "website",
+    og_author = c("Petr Bouchal"),
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@petrbouchal"
+  )
+```
+
+# {.tabset}
+
+## Tab 1 {.tabset .tabset-pills} 
+
+```{r tab1}
+
+```
+
+
+### Subtab 1
+
+```{r subtab1}
+```
+
+### Subtab 2
+
+```{r subtab2}
+```
+
+## Data & disclaimer
+
+Text
+
+# 
+
+Last built on `r format(lubridate::now("CET"), "%Y-%m-%d %H:%M %Z")`

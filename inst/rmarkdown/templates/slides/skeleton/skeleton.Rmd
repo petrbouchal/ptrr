@@ -1,0 +1,207 @@
+---
+title: "Title"
+subtitle: "Workshop: konference EJ NOK 2020"
+author: "Petr Bouchal"
+date: date
+output:
+  xaringan::moon_reader:
+    css: [xaringan-themer.css, slides.css]
+    lib_dir: libs
+    yolo: false
+    mathjax: NULL
+    includes:
+      in_header: meta.html
+    seal: true 
+    nature:
+      ratio: 16:9
+      slideNumberFormat: ""
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      titleSlideClass: [bottom, left, inverse]
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.retina = 3, echo = F,
+                      cache = F,
+                      warning = F,
+                      comment = "",
+                      dev = "ragg_png",
+                      fig.showtext = T,
+                      message = F)
+library(fontawesome)
+library(tidyverse)
+library(ptrr)
+library(ragg)
+library(knitr)
+
+library(xaringanExtra)
+library(flipbookr)
+
+ptrr::set_geom_defaults()
+update_geom_defaults("rect", list(fill = "blue"))
+
+options(tibble.print_min = 20)
+```
+
+```{r, include=FALSE}
+xaringanExtra::use_xaringan_extra("share_again")
+
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket")
+)
+
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,         
+  mute_unhighlighted_code = TRUE  
+)
+```
+
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#0000ff",
+  header_font_google = google_font("IBM Plex Sans"),
+  text_font_google   = google_font("IBM Plex Sans"),
+  code_font_google   = google_font("IBM Plex Mono"),
+  table_row_even_background_color = "fff"
+)
+```
+
+```{r fonts, include=FALSE}
+sysfonts::font_add_google("IBM Plex Sans", "Roboto")
+sysfonts::font_add_google("IBM Plex Sans Condensed", "Roboto Condensed")
+```
+
+```{r meta, include=FALSE}
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "Description",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "petrbouchal/xxx") %>% 
+  meta_social(
+    title = "Title",
+    url = "https://petrbouchal.xyz/xxx",
+    image = "https://petrbouchal.xyz/xxx/slides/twitter_card.png",
+    image_alt = "social alt",
+    og_type = "website",
+    og_locale = "cs_CZ",
+    og_author = "Petr Bouchal",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@petrbouchal"
+  ) %>% 
+  write_meta("meta.html")
+```
+
+class: left, middle, inverse
+
+# Break slide
+
+---
+class: left, top, large
+
+ 1\. Ujasnit si, kdy a proč použít na data programovací jazyk (R)
+
+--
+
+ 2\. Naučit se vyznat se v R a RStudiu
+
+--
+
+ 3\. Poznat nástroje na práci s daty
+
+--
+
+ 4\. Poznat nástroje na tvorbu výstupů
+
+--
+
+ 5\. Vědět, kde a jak se učit další věci
+
+---
+
+# Large slide
+
+.large[
+
+pokrýt všechny nástroje do hloubky
+
+naučit se statistiku
+
+řešit "big data" / "umělou inteligenci" a další buzzwords
+
+]
+
+---
+
+class: center, middle
+
+.large[
+
+[petrbouchal.xyz/eval2020](https://petrbouchal.xyz/eval2020)
+
+]
+---
+
+class: center, middle, large
+
+# Flipbook
+
+---
+
+`r chunk_reveal("tidyverse-priklad")`
+```{r tidyverse-priklad, include = FALSE}
+gdta %>%
+  select(-country_region) %>%  #BREAK
+  rename(kraj_nazev = sub_region_1) %>% #BREAK
+  filter(date > "2020-10-01") %>% #BREAK
+  mutate(zmena_dec = zmena/100) %>%  #BREAK
+  select(-zmena) %>%  #BREAK
+  group_by(kraj_nazev, kategorie) %>%  #BREAK
+  mutate(zmena_min = min(zmena_dec, na.rm = T), #BREAK2
+         zmena_max = max(zmena_dec, na.rm = T)) %>%  #BREAK2
+  summarise(zmena_p = mean(zmena_dec, na.rm = T)) %>% #BREAK4
+  ungroup() %>%  #BREAK
+  arrange(kategorie, zmena_p) %>%  #ROTATE
+  arrange(kategorie, desc(zmena_p)) %>%  #ROTATE
+  filter(kategorie == "workplaces") %>% 
+  replace_na(list(kraj_nazev = "Celá ČR")) %>% 
+  gt::gt()
+```
+
+---
+
+class: center, middle
+
+# Poděkování
+
+EJ NOK MMR
+
+Tvůrci tidyverse
+
+Yihui Xie, tvůrce balíku xaringan (nástroj těchto slidů)
+
+Garick Aden-Buie: balíky xaringanExtra, xaringanthemr
+
+flipbookr
+
+---
+
+class: inverse, bottom, right
+layout: false
+
+.large[
+<a href="https://twitter.com/petrbouchal">`r fa("twitter", fill = "white")`</a> <a href="https://github.com/petrbouchal">`r fa("github", fill = "white")`</a> <a href="https://linkedin.com/in/petrbouchal">`r fa("linkedin", fill = "white")`</a> petrbouchal
+
+pbouchal@gmail.com
+
+]
+
+
+
+
+

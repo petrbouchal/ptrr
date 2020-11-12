@@ -1,0 +1,20 @@
+name: Site name
+output_dir: docs
+include: ["demo.R"]
+exclude: ["LICENSE.md", "*.csv", "*.rds", "renv", "renv.lock"]
+navbar:
+  title: "Site title"
+  right:
+  - icon: fa-github fa-lg
+    href: https://github.com/petrbouchal/xxx
+  - icon: fa-asterisk fa-lg
+    href: https://petrbouchal.xyz
+output:
+  html_document:
+    css: site.css
+    toc: false
+    toc_float: false
+    mathjax: null
+    df_print: paged
+    # includes:
+    #   in_header: matomo.html

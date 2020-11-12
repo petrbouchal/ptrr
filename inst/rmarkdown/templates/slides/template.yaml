@@ -1,0 +1,4 @@
+name: slides
+description: >
+   Xaringan slides in ptrr style
+create_dir: TRUE

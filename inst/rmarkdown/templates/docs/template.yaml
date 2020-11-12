@@ -1,0 +1,4 @@
+name: docs
+description: >
+   Project docs in ptrr style
+create_dir: TRUE

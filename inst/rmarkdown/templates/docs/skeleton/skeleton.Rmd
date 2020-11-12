@@ -1,0 +1,79 @@
+---
+title: Title
+output:
+  html_document:
+    css: docs.css
+    toc: false
+    toc_depth: 3
+    toc_float:
+      collapset: false
+    includes:
+      in_header: [meta.html]
+      # in_header: [meta.html, matomo.html]
+---
+
+```{r, include=F}
+library(fontawesome)
+library(xaringanExtra)
+
+knitr::opts_chunk$set(echo = F)
+
+col_icon <- "#00f"
+```
+
+
+```{r meta, echo=F}
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "Title",
+    generator = "Rmadkown + pandoc"
+  ) %>% 
+  meta_name("github-repo" = "petrbouchal/xxx") %>% 
+  meta_social(
+    title = "Efektivní a přehledná práce s daty v prostředí jazyka R",
+    url = "https://petrbouchal.xyz/xxx",
+    image = "https://petrbouchal.xyz/xxx/slides/twitter_card.png",
+    image_alt = "Social Alt",
+    og_type = "website",
+    og_locale = "cs_CZ",
+    og_author = "Petr Bouchal",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@petrbouchal"
+  ) %>% 
+  write_meta("meta.html")
+```
+
+> Subtitle
+
+Vzdělávací workshop pro evaluátory, Konference Evaluační jednotky NOK, 5. listopadu 2020 (MMR)
+
+# {.tabset}
+
+## Tab 1
+
+## Subtab 1
+
+### Sub-subtab 1
+
+## Subtab with pills below {#materialy .tabset .tabset-pills}
+
+### Pill 1
+
+Text
+
+### Pill 2
+
+#### Subheading
+
+## Slides 
+
+```{r}
+# embed_xaringan("slides/index.html", border = "none")
+```
+
+
+## In preparation
+
+### `r fa("clock", fill = col_icon)` v přípravě
+

@@ -19,6 +19,8 @@ It contains:
 -   `precommit` recipes
 -   font import utilities
 -   number, date and scale formatting functions
+-   Rmd templates and related utilities for repo doc, xaringan slides,
+    and Rmd webpage
 
 ## Installation
 

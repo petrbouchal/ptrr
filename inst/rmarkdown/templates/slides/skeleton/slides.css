@@ -1,0 +1,27 @@
+.large {font-size: 45px; color: #000;}
+.medium {font-size: 30px; color: #000;}
+.inverse .large {font-size: 45px; color: #fff;}
+.inverse .medium {font-size: 30px; color: #fff;}
+
+kbd {
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-family: "IBM Plex Mono", Monospace;
+    border-radius: 4px;
+    color: rgb(51, 51, 51);
+    padding: 0.1em 0.1em;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+.k {
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-family: "IBM Plex Mono", Monospace;
+    border-radius: 4px;
+    color: rgb(51, 51, 51);
+    padding: 0.1em 0.1em;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
