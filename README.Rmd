@@ -20,6 +20,18 @@ knitr::opts_chunk$set(
 
 This is a package for personal utilities.
 
+It contains:
+
+- RMarkdown templates and output formats
+  - document
+  - invoice
+  - xaringan presentation
+- `ggplot2` themes
+- `drat` utilities
+- `precommit` recipes
+- font import utilities
+- number, date and scale formatting functions
+
 ## Installation
 
 You can install the latest release of ptrr from [Github](https://github.com) with:

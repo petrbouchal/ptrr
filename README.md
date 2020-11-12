@@ -4,10 +4,21 @@
 # ptrr
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 This is a package for personal utilities.
+
+It contains:
+
+-   RMarkdown templates and output formats
+    -   document
+    -   invoice
+    -   xaringan presentation
+-   `ggplot2` themes
+-   `drat` utilities
+-   `precommit` recipes
+-   font import utilities
+-   number, date and scale formatting functions
 
 ## Installation
 
@@ -29,14 +40,14 @@ installed with
 
 ``` r
 install.packages("ptrr", repos = "https://petrbouchal.github.io/drat")
-#> 
-#> The downloaded binary packages are in
-#>  /var/folders/c8/pj33jytj233g8vr0tw4b2h7m0000gn/T//Rtmp0u6GCg/downloaded_packages
+#> Installing package into '/Users/petr/Library/R/4.0/library'
+#> (as 'lib' is unspecified)
+#> installing the source package 'ptrr'
 ```
 
 ## TODO
 
-  - rounding function
+-   rounding function
     <https://twitter.com/hspter/status/314858331598626816>
-  - Czech scales
-  - Czech units
+-   Czech scales
+-   Czech units
