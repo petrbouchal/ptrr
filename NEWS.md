@@ -1,4 +1,4 @@
-# ptrr (development version)
+# ptrr 0.2.0
 
 * new basic Rmarkdown template
 * new date formatting functions
