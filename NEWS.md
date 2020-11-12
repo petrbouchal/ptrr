@@ -1,5 +1,7 @@
 # ptrr (development version)
 
+* new templates: site, repo docs pages, xaringan slides
+
 # ptrr 0.2.0
 
 * new basic Rmarkdown template
