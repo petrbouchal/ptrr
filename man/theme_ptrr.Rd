@@ -7,8 +7,8 @@
 theme_ptrr(
   gridlines = c("y", "x", "both", "scatter", "none"),
   base_size = 11,
-  family = "Roboto Condensed",
-  title_family = "Roboto",
+  family = "IBM Plex Sans Condensed",
+  title_family = "IBM Plex Sans",
   margin_side = 6,
   margin_bottom = 6,
   plot.title.position = "plot",
@@ -24,7 +24,9 @@ theme_ptrr(
 
 \item{base_size}{Numeric text size in pts, affects all text in plot. Defaults to 11.}
 
-\item{family, title_family}{font family to use for the (title of the) plot. Defaults to `"Roboto"` for title and `"Roboto Condensed"` for plot.}
+\item{family, title_family}{font family to use for the (title of the) plot. Defaults to `"IBM Plex Sans"` for title and `"IBM Plex Sans Condensed"` for plot.}
+
+\item{multiplot}{if set to TRUE, provides better styling for small multiples created using `facet_*`.}
 
 \item{margin_side, margin_bottom}{size of left and right / bottom margin around plot, in pts. Defaults to 6. Set to 0 to align flush with text in a Word document.}
 
@@ -54,7 +56,7 @@ y axes are better documented in a subtitle
 All the changed defaults can be overriden by another call to `theme()`.
 }
 \note{
-The default fonts - Roboto and Roboto Condensed - are contained in this package and
+The default fonts - IBM Plex Sans and IBM Plex Sans Condensed - are contained in this package and
 can be registered with the system using `import_fonts()`. You should then install them onto your
 system like any font, using files in the directories described in the `import_fonts()` messsage.
 You can also set the  `ptrr.loadfonts` option to TRUE for the fonts

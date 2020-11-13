@@ -15,7 +15,7 @@
 #'
 #' All the changed defaults can be overriden by another call to `theme()`.
 #'
-#' @note The default fonts - Roboto and Roboto Condensed - are contained in this package and
+#' @note The default fonts - IBM Plex Sans and IBM Plex Sans Condensed - are contained in this package and
 #' can be registered with the system using `import_fonts()`. You should then install them onto your
 #' system like any font, using files in the directories described in the `import_fonts()` messsage.
 #' You can also set the  `ptrr.loadfonts` option to TRUE for the fonts
@@ -24,7 +24,7 @@
 #' @param base_size Numeric text size in pts, affects all text in plot. Defaults to 11.
 #' @param gridlines Whether to display major gridlines along `"y"` (the default),
 #' `"x"`, `"both"` or draw a `"scatter"`, which has both gridlines and inverted colours.
-#' @param family,title_family font family to use for the (title of the) plot. Defaults to `"Roboto"` for title and `"Roboto Condensed"` for plot.
+#' @param family,title_family font family to use for the (title of the) plot. Defaults to `"IBM Plex Sans"` for title and `"IBM Plex Sans Condensed"` for plot.
 #' @param margin_side,margin_bottom size of left and right / bottom margin around plot, in pts. Defaults to 6. Set to 0 to align flush with text in a Word document.
 #' @param plot.title.position where to align the title. Either "plot" (the default, difference from `theme()` default) or `"panel"`.
 #' @param axis.title same as in theme(), but with a default of `element_blank()`.
@@ -85,8 +85,8 @@
 #' @export
 theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter", "none"),
                          base_size = 11,
-                         family = "Roboto Condensed",
-                         title_family = "Roboto",
+                         family = "IBM Plex Sans Condensed",
+                         title_family = "IBM Plex Sans",
                          margin_side = 6,
                          margin_bottom = 6,
                          plot.title.position = "plot",
