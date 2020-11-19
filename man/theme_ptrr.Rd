@@ -9,11 +9,12 @@ theme_ptrr(
   base_size = 11,
   family = "IBM Plex Sans Condensed",
   title_family = "IBM Plex Sans",
+  multiplot = FALSE,
+  tonecol = ptclr_l,
   margin_side = 6,
   margin_bottom = 6,
   plot.title.position = "plot",
   axis_titles = FALSE,
-  multiplot = FALSE,
   richtext = FALSE,
   ...
 )

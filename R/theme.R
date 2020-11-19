@@ -1,4 +1,25 @@
 
+#' @rdname Colours
+#' @md
+#' @description Normal theme blue in hex
+#' @family Theme colours
+#' @export
+ptclr_n <- "#0000ff"
+
+#' @rdname Colours
+#' @md
+#' @description Dark theme blue in hex
+#' @family Theme colours
+#' @export
+ptclr_d <- "#00008b"
+
+#' @rdname Colours
+#' @md
+#' @description Light theme blue in hex
+#' @family Theme colours
+#' @export
+ptclr_l <- "#e3f1ff"
+
 #' A custom ggplot2 theme
 #'
 #' A wrapper around `theme()` which provides several shortcuts to setting common options
@@ -87,15 +108,14 @@ theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter", "none"),
                          base_size = 11,
                          family = "IBM Plex Sans Condensed",
                          title_family = "IBM Plex Sans",
+                         multiplot = FALSE,
+                         tonecol = ptclr_l,
                          margin_side = 6,
                          margin_bottom = 6,
                          plot.title.position = "plot",
                          axis_titles = FALSE,
-                         multiplot = FALSE,
                          richtext = FALSE,
                          ...) {
-  tonecol <- "#e3f1ff"
-
   element_switch <- if(richtext) ggtext::element_markdown else ggplot2::element_text
 
   grd <- match.arg(gridlines)

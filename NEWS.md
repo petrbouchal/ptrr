@@ -2,6 +2,7 @@
 
 * new templates: site, repo docs pages, xaringan slides
 * switch default font to IBM Plex Sans
+* light tone colour is now parameterised in theme
 
 # ptrr 0.2.0
 
