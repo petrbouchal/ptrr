@@ -30,8 +30,6 @@ theme_ptrr(
 
 \item{plot.title.position}{where to align the title. Either "plot" (the default, difference from `theme()` default) or `"panel"`.}
 
-\item{multiplot}{if set to TRUE, provides better styling for small multiples created using `facet_*`.}
-
 \item{...}{Other parameters to be passed to `theme()`.}
 
 \item{axis.title}{same as in theme(), but with a default of `element_blank()`.}
@@ -50,7 +48,7 @@ In particular, the theme:
 - switches defaults for title alignment
 - turns axis labels off by default: in practice, x axes are often obvious and
 y axes are better documented in a subtitle
-- sets backgrounds to a schola-style shade
+- sets backgrounds to a ptrr-style shade
 - sets plot title in bold and 120% of base_size
 
 All the changed defaults can be overriden by another call to `theme()`.
@@ -79,34 +77,34 @@ p <- ggplot(mpg) +
 # using `theme_ptrr()` defaults
 
 p +
-  theme_schola("x", family = "sans", title_family = "sans")
+  theme_ptrr("x", family = "sans", title_family = "sans")
 
 # in combination with `flush_axis`:
 
 p +
-  theme_schola("x", family = "sans", title_family = "sans") +
+  theme_ptrr("x", family = "sans", title_family = "sans") +
   scale_x_continuous(expand = flush_axis)
 
 # scatter
 
 ggplot(mpg) +
   geom_point(aes(cty, hwy)) +
-  theme_schola("scatter", family = "sans", title_family = "sans") +
+  theme_ptrr("scatter", family = "sans", title_family = "sans") +
   labs(title = "Lots of cars", subtitle = "Point by point")
 
 # Smaller text, flush alignment
 
 ggplot(mpg) +
   geom_point(aes(cty, hwy)) +
-  theme_schola("scatter", base_size = 9, margin_side = 0,
+  theme_ptrr("scatter", base_size = 9, margin_side = 0,
                 family = "sans", title_family = "sans") +
   labs(title = "Lots of cars", subtitle = "Point by point")
 
-# Override defaults changed inside `theme_schola()`
+# Override defaults changed inside `theme_ptrr()`
 
 ggplot(mpg) +
   geom_point(aes(cty, hwy)) +
-  theme_schola("scatter", base_size = 9, margin_side = 0,
+  theme_ptrr("scatter", base_size = 9, margin_side = 0,
                family = "sans", title_family = "sans") +
   labs(title = "Lots of cars", subtitle = "Point by point") +
   theme(panel.background = element_rect(fill = "lightpink"))
