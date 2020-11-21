@@ -22,9 +22,11 @@ ptrr_word <- function(...) {
     template <- reference_docx
   }
 
-  pandoc_quotes_arg <- paste0("--lua-filter=",
-                              ptrr_file("pandoc-quotes.lua"))
-  base <- bookdown::word_document2(pandoc_args = pandoc_quotes_arg, ...)
+  base <- bookdown::word_document2(reference_docx = template,
+                                   ...)
+  base$pandoc$lua_filters <- c(
+    rmarkdown::pandoc_path_arg(ptrr_file("pandoc-quotes.lua")),
+    base$pandoc$lua_filters)
 
   # nolint start
   base$knitr$opts_chunk$comment <- "#>"
