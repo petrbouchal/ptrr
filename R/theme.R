@@ -13,7 +13,9 @@ ptclr_n <- "#0000ff"
 #' @export
 ptclr_d <- "#00008b"
 
+#' Colours
 #' @rdname Colours
+#' @aliases Colours
 #' @md
 #' @description Light theme blue in hex
 #' @family Theme colours
