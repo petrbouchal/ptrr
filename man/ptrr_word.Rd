@@ -2,7 +2,7 @@
 % Please edit documentation in R/rmarkdown-output.R
 \name{ptrr_word}
 \alias{ptrr_word}
-\title{Basic Schola Empirica word document}
+\title{Basic ptrr word document}
 \usage{
 ptrr_word(...)
 }
@@ -10,11 +10,11 @@ ptrr_word(...)
 \item{...}{Arguments to be passed to `[bookdown::word_document2]`}
 }
 \value{
-A modified `word_document2` with the standard Schola formatting.
+A modified `word_document2` with the standard ptrr formatting.
 }
 \description{
 This is a function called in the output of the yaml of the Rmd file to
-specify using the standard Schola word document formatting.
+specify using the standard ptrr word document formatting. By default,
 }
 \examples{
 \dontrun{

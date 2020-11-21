@@ -1,11 +1,10 @@
-#' Basic Schola Empirica word document
+#' Basic ptrr word document
 #'
 #' This is a function called in the output of the yaml of the Rmd file to
-#' specify using the standard Schola word document formatting.
 #'
 #' @param ... Arguments to be passed to `[bookdown::word_document2]`
 #'
-#' @return A modified `word_document2` with the standard Schola formatting.
+#' @return A modified `word_document2` with the standard ptrr formatting.
 #' @family Report templates and formats
 #' @export
 #'

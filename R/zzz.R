@@ -23,7 +23,7 @@
 
   fnt <- extrafont::fonttable()
   if (!any(grepl("Roboto|Roboto[ ]Condensed", fnt$FamilyName))) {
-    packageStartupMessage("NOTE: Roboto and Roboto Condensed fonts are required for the default setting of theme_schola() to work.")
+    packageStartupMessage("NOTE: Roboto and Roboto Condensed fonts are required for the default setting of theme_ptrr() to work.")
     packageStartupMessage("      Please use ptrr::import_fonts() to install Roboto and Roboto Condensed")
   } # nocov end
 
