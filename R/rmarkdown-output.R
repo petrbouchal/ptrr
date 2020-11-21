@@ -1,6 +1,9 @@
 #' Basic ptrr word document
 #'
 #' This is a function called in the output of the yaml of the Rmd file to
+#' specify using the standard ptrr word document formatting. By default,
+#' it uses the Word template built into the package as the `reference_docx`
+#' YAML option
 #'
 #' @param ... Arguments to be passed to `[bookdown::word_document2]`
 #'
@@ -13,8 +16,11 @@
 #'   output: ptrr::ptrr_word
 #' }
 ptrr_word <- function(...) {
-  template <- find_resource("ptrr_word", "template.docx")
-  base <- bookdown::word_document2(reference_docx = template, ...)
+  if(!exists("reference_docx")) {
+    template <- find_resource("ptrr_word", "template.docx")
+  } else {
+    template <- reference_docx
+  }
 
   pandoc_quotes_arg <- paste0("--lua-filter=",
                               ptrr_file("pandoc-quotes.lua"))

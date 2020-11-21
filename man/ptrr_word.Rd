@@ -15,6 +15,8 @@ A modified `word_document2` with the standard ptrr formatting.
 \description{
 This is a function called in the output of the yaml of the Rmd file to
 specify using the standard ptrr word document formatting. By default,
+it uses the Word template built into the package as the `reference_docx`
+YAML option
 }
 \examples{
 \dontrun{
