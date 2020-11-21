@@ -1,8 +1,8 @@
 ---
-title: "Template Title"
-author: "Your Name"
+title: "Document Title"
+author: "Petr Bouchal"
 date: "The Date"
-output: output_format
+output: ptrr::ptrr_word
 ---
 
 ```{r setup, include=FALSE}
