@@ -15,14 +15,11 @@
 #' \dontrun{
 #'   output: ptrr::ptrr_word
 #' }
-ptrr_word <- function(...) {
-  if(!exists("reference_docx")) {
-    template <- find_resource("ptrr_word", "template.docx")
-  } else {
-    template <- reference_docx
-  }
-
-  base <- bookdown::word_document2(reference_docx = template,
+ptrr_word <- function(reference_docx = find_resource("ptrr_word", "template.docx"),
+                      number_sections = FALSE,
+                      ...) {
+  base <- bookdown::word_document2(reference_docx = reference_docx,
+                                   number_sections = number_sections,
                                    ...)
   base$pandoc$lua_filters <- c(
     rmarkdown::pandoc_path_arg(ptrr_file("pandoc-quotes.lua")),
