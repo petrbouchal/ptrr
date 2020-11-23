@@ -3,6 +3,7 @@
 * new templates: site, repo docs pages, xaringan slides
 * switch default font to IBM Plex Sans
 * light tone colour is now parameterised in theme
+* incorporated quotes Lua filter into package and Rmd template
 
 # ptrr 0.2.0
 

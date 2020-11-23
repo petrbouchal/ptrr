@@ -22,7 +22,7 @@ ptrr_word <- function(reference_docx = find_resource("ptrr_word", "template.docx
                                    number_sections = number_sections,
                                    ...)
   base$pandoc$lua_filters <- c(
-    rmarkdown::pandoc_path_arg(ptrr_file("pandoc-quotes.lua")),
+    rmarkdown::pkg_file_lua("pandoc-quotes.lua", package = "ptrr"),
     base$pandoc$lua_filters)
 
   # nolint start
