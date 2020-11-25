@@ -352,8 +352,8 @@ scale_y_number_cz <- function(name = waiver(),
 #'   theme_ptrr(family = "sans", title_family = "sans", gridlines = "scatter") +
 #'   scale_color_binned(labels = label_percent_cz()) +
 #'   scale_size_binned(labels = label_number_cz())
-label_percent_cz <- function (accuracy = NULL, scale = 100, prefix = "", suffix = " %",
-                              big.mark = " ", decimal.mark = ",", trim = TRUE, ...)
+label_percent_cz <- function (accuracy = NULL, scale = 100, prefix = "", suffix = "\ua0%",
+                              big.mark = "\ua0", decimal.mark = ",", trim = TRUE, ...)
 {
   scales::number_format(accuracy = accuracy, scale = scale, prefix = prefix,
                 suffix = suffix, big.mark = big.mark, decimal.mark = decimal.mark,
@@ -365,7 +365,7 @@ label_percent_cz <- function (accuracy = NULL, scale = 100, prefix = "", suffix 
 #' @name formatscz
 #' @export
 label_number_cz <- function (accuracy = NULL, scale = 1, prefix = "", suffix = "",
-                             big.mark = " ", decimal.mark = ",", trim = TRUE, ...)
+                             big.mark = "\ua0", decimal.mark = ",", trim = TRUE, ...)
 {
   scales:::force_all(accuracy, scale, prefix, suffix, big.mark, decimal.mark,
             trim, ...)
@@ -374,8 +374,8 @@ label_number_cz <- function (accuracy = NULL, scale = 1, prefix = "", suffix = "
                      decimal.mark = decimal.mark, trim = trim, ...)
 }
 
-label_percent_cz_abs <- function(accuracy = NULL, scale = 100, prefix = "", suffix = " %",
-                      big.mark = " ", decimal.mark = ",", trim = TRUE, ...)
+label_percent_cz_abs <- function(accuracy = NULL, scale = 100, prefix = "", suffix = "\ua0%",
+                      big.mark = "\ua0", decimal.mark = ",", trim = TRUE, ...)
 {
   scales:::force_all(accuracy, scale, prefix, suffix, big.mark, decimal.mark,
                     trim, ...)
