@@ -1,21 +1,20 @@
 ---
 title: "Document Title"
 author: "Petr Bouchal"
-date: "The Date"
+date: '`r format(Sys.time(), "%d. %B %Y")`'
 output: ptrr::ptrr_word
 lang: cs
 ---
 
 ```{r setup, include=FALSE}
-
 library(tidyverse)
 library(ptrr)
 ```
 
-## Adding an RMarkdown Template
+## Heading 2
 
-"This file is what a user will see when they select your template. Make sure that you update the fields in the yaml header. In particular you will want to update the `output` field to whatever format your template requires."
+Below, testing some quotes and formatting of inline numbers.
 
-'This is a good place' to demonstrate special features that your template provides. Ideally it should knit out-of-the-box, or at least contain clear instructions as to what needs changing.
+"This file is what a user will see when they select your template for `r label_percent_cz()(.1)`. Make sure that you update the fields in the yaml header. In particular you will want to update the `output` field to whatever format your template requires."
 
-Finally, be sure to remove this message!
+'This is a good place' to demonstrate special features that your template provides for `r label_number_cz()(1000)` users. Ideally it should knit out-of-the-box, or at least contain clear instructions as to what needs changing.

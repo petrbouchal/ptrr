@@ -26,7 +26,7 @@ ptrr_word <- function(reference_docx = find_resource("ptrr_word", "template.docx
     base$pandoc$lua_filters)
 
   # nolint start
-  base$knitr$opts_chunk$comment <- "#>"
+  base$knitr$opts_chunk$comment <- ""
   base$knitr$opts_chunk$message <- FALSE
   base$knitr$opts_chunk$warning <- FALSE
   base$knitr$opts_chunk$error <- FALSE
