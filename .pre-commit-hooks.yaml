@@ -3,4 +3,4 @@
     description: Detects View() statements.
     entry: inst/bin/no-view-statement
     language: script
-    files: '(\.R|\.Rmd|\.Rnw|\.r|\.rmd|\.rnw)$'
+    files: '\.[rR]$'
