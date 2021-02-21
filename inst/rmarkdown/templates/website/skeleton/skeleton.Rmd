@@ -31,8 +31,8 @@ ptrr::set_geom_defaults()
 ```
 
 ```{r fonts}
-sysfonts::font_add_google("IBM Plex Sans", "Roboto")
-sysfonts::font_add_google("IBM Plex Sans Condensed", "Roboto Condensed")
+ptrr::register_plexsans()
+ptrr::register_plexsans_condensed()
 ```
 
 ```{r metathis}

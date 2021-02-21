@@ -71,8 +71,8 @@ style_mono_accent(
 ```
 
 ```{r fonts, include=FALSE}
-sysfonts::font_add_google("IBM Plex Sans", "Roboto")
-sysfonts::font_add_google("IBM Plex Sans Condensed", "Roboto Condensed")
+ptrr::register_plexsans()
+ptrr::register_plexsans_condensed()
 ```
 
 ```{r meta, include=FALSE}
