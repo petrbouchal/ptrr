@@ -5,7 +5,7 @@
 #'
 #' @param family What you want the resulting font family to be called in the registry. Defaults to "IBM Plex Sans Condensed"
 #' @param features Unused for now
-#' @param warn Whether to warn when a font family of the same name already exists.
+#' @param warn Whether to warn when a font family of the same name already exists. Defaults to TRUE.
 #'
 #' @return TRUE if a font was successfully registered, FALSE otherwise. Called for side effects.
 #' @examples

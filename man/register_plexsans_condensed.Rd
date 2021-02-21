@@ -15,7 +15,7 @@ register_plexsans_condensed(
 
 \item{features}{Unused for now}
 
-\item{warn}{Whether to warn when a font family of the same name already exists.}
+\item{warn}{Whether to warn when a font family of the same name already exists. Defaults to TRUE.}
 }
 \value{
 TRUE if a font was successfully registered, FALSE otherwise. Called for side effects.
