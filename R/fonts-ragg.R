@@ -17,8 +17,8 @@ register_plexsans_condensed <- function(family = "IBM Plex Sans", features = NUL
 }
 
 #' @export
-register_plexsans <- function(family = "IBM Plex Sans Condensed", features = NULL) {
-  systemfonts::register_font("IBM Plex Sans Condensed",
+register_plexsans <- function(family = "IBM Plex Sans", features = NULL) {
+  systemfonts::register_font(family,
                              plain = system.file("fonts", "plex",
                                                  "IBMPlexSans-Regular.ttf",
                                                  package = "ptrr"),
