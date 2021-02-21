@@ -4,7 +4,7 @@
 * switch default font to IBM Plex Sans
 * light tone colour is now parameterised in theme
 * fixed logic in ptrr_word() to allow overrding docx template
-* incorporated quotes Lua filter into package and Rmd template
+* incorporated quotes Lua filter into package and Rmd template and helper function
 * use non-breaking space in number formats
 
 # ptrr 0.2.0
