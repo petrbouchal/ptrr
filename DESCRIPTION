@@ -25,7 +25,9 @@ Imports:
     rhub (>= 1.1.1),
     scales (>= 1.1.0),
     showtext,
-    sysfonts
+    sysfonts,
+    ragg (>= 1.1.0),
+    systemfonts (>= 1.0.1)
 Remotes: 
     clauswilke/ggtext
 Encoding: UTF-8
