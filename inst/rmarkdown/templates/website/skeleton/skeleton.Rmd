@@ -1,13 +1,13 @@
 ---
 title: "New site"
+lang: cs
 ---
 
 ```{r setup, include=F}
 
-knitr::opts_chunk$set(fig.retina = 3, echo = F, eval = T,
+knitr::opts_chunk$set(echo = F, eval = T,
                       warning = F,
                       out.width = "90%",
-                      dev = "ragg_png",
                       fig.showtext = T,
                       message = F)
 

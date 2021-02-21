@@ -14,6 +14,8 @@ output:
     css: site.css
     toc: false
     toc_float: false
+    dev: ragg:agg_png
+    fig_retina = 3
     mathjax: null
     df_print: paged
     # includes:
