@@ -6,6 +6,7 @@
 * fixed logic in ptrr_word() to allow overrding docx template
 * incorporated quotes Lua filter into package and Rmd template and helper function
 * use non-breaking space in number formats
+* initial basic support for using IBM Plex Sans via systemfonts
 
 # ptrr 0.2.0
 
