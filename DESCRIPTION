@@ -24,7 +24,6 @@ Imports:
     pkgbuild (>= 1.0.6),
     rhub (>= 1.1.1),
     scales (>= 1.1.0),
-    ragg (>= 1.1.0),
     systemfonts (>= 1.0.1),
     usethis (>= 2.0.0)
 Encoding: UTF-8
@@ -32,5 +31,6 @@ Language: en
 LazyData: true
 RoxygenNote: 7.1.1
 Suggests: 
+    ragg (>= 1.1.0),
     rmarkdown (>= 2.7),
     knitr (>= 1.31)
