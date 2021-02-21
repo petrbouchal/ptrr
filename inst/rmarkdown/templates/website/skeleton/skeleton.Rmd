@@ -28,7 +28,6 @@ library(tidyverse)
 Sys.setlocale("LC_TIME", "cs_CZ.UTF-8")
 
 ptrr::set_geom_defaults()
-update_geom_defaults("rect", list(fill = "blue"))
 ```
 
 ```{r fonts}
