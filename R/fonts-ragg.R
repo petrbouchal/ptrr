@@ -1,5 +1,5 @@
 #' @export
-register_plexsans_condensed <- function(family = "IBM Plex Sans", features = NULL) {
+register_plexsans_condensed <- function(family = "IBM Plex Sans Condensed", features = NULL) {
 
   if(family %in% systemfonts::system_fonts()[["family"]]) {
     usethis::ui_warn(" Family {usethis::ui_value(family)} already exists in system font registry. Skipping.")
