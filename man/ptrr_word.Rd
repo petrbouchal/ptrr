@@ -4,7 +4,11 @@
 \alias{ptrr_word}
 \title{Basic ptrr word document}
 \usage{
-ptrr_word(...)
+ptrr_word(
+  reference_docx = find_resource("ptrr_word", "template.docx"),
+  number_sections = FALSE,
+  ...
+)
 }
 \arguments{
 \item{...}{Arguments to be passed to `[bookdown::word_document2]`}
