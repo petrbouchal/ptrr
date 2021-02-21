@@ -6,7 +6,7 @@ output:
     toc: false
     toc_depth: 3
     toc_float:
-      collapset: false
+      collapse: false
     includes:
       in_header: [meta.html]
       # in_header: [meta.html, matomo.html]
