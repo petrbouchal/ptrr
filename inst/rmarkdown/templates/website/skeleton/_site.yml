@@ -5,9 +5,9 @@ exclude: ["LICENSE.md", "*.csv", "*.rds", "renv", "renv.lock"]
 navbar:
   title: "Site title"
   right:
-  - icon: fa-github fa-lg
+  - icon: fab fa-github fa-lg
     href: https://github.com/petrbouchal/xxx
-  - icon: fa-asterisk fa-lg
+  - icon: fas fa-asterisk fa-lg
     href: https://petrbouchal.xyz
 output:
   html_document:
