@@ -34,3 +34,6 @@ Encoding: UTF-8
 Language: en
 LazyData: true
 RoxygenNote: 7.1.1
+Suggests: 
+    rmarkdown (>= 2.7),
+    knitr (>= 1.31)
