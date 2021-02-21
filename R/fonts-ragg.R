@@ -1,8 +1,8 @@
 #' @export
-register_plexsans_condensed <- function(family = "IBM Plex Sans Condensed", features = NULL) {
+register_plexsans_condensed <- function(family = "IBM Plex Sans Condensed", features = NULL, warn = TRUE) {
 
   if(family %in% systemfonts::system_fonts()[["family"]]) {
-    usethis::ui_warn(" Family {usethis::ui_value(family)} already exists in system font registry. Skipping.")
+    if(warn) usethis::ui_warn(" Family {usethis::ui_value(family)} already exists in system font registry. Skipping.")
   } else {
 
     systemfonts::register_font(family,
@@ -24,10 +24,10 @@ register_plexsans_condensed <- function(family = "IBM Plex Sans Condensed", feat
 }
 
 #' @export
-register_plexsans <- function(family = "IBM Plex Sans", features = NULL) {
+register_plexsans <- function(family = "IBM Plex Sans", features = NULL, warn = TRUE) {
 
   if(family %in% systemfonts::system_fonts()[["family"]]) {
-    usethis::ui_warn(" Family {usethis::ui_value(family)} already exists in system font registry. Skipping.")
+    if(warn) usethis::ui_warn(" Family {usethis::ui_value(family)} already exists in system font registry. Skipping.")
   } else {
 
     systemfonts::register_font(family,
