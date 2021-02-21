@@ -46,7 +46,7 @@ register_plexsans_condensed <- function(family = "IBM Plex Sans Condensed", feat
 #'
 #' @return TRUE if a font was successfully registered, FALSE otherwise. Called for side effects.
 #' @examples
-#' register_plexsans_condensed("ibmpsc")
+#' register_plexsans("ibmpsc")
 #' @export
 register_plexsans <- function(family = "IBM Plex Sans", features = NULL, warn = TRUE) {
 
