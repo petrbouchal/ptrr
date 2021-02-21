@@ -10,7 +10,7 @@ Authors@R:
 Description: A collection of personal utilities, themes and
     templates.
 License: MIT + file LICENSE
-URL: https://github.com/petrbouchal/ptrr
+URL: http://petrbouchal.xyz/ptrr, https://github.com/petrbouchal/ptrr
 BugReports: https://github.com/petrbouchal/ptrr/issues
 Imports: 
     callr (>= 3.4.2),

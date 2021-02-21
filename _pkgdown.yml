@@ -1,0 +1,19 @@
+home:
+  title: R package with personal utilities
+  description: Petr Bouchal
+
+destination: docs
+url: http://petrbouchal.xyz/ptrr
+development:
+  mode: auto
+authors:
+  Petr Bouchal:
+    href: https://petrbouchal.xyz
+navbar:
+  structure:
+    left:  [home, intro, reference, articles, news]
+    right: [github, pbhome]
+  components:
+    pbhome:
+      icon: "fas fa-asterisk fa-lg"
+      href: https://petrbouchal.xyz
