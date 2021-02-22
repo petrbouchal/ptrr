@@ -1,6 +1,6 @@
 home:
   title: R package with personal utilities
-  description: Petr Bouchal
+  description: A collection of personal utilities, themes and templates
 
 destination: docs
 url: http://petrbouchal.xyz/ptrr
