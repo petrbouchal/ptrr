@@ -18,6 +18,11 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v1
 
+      - name: install fonts and font system deps
+        run: |
+          brew install pkg-config
+          brew install harfbuzz fribidi
+
       - name: Query dependencies
         run: |
           install.packages('remotes')
