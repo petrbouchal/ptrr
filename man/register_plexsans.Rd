@@ -21,5 +21,5 @@ Register the IBM Plex Sans font files contained in the package with the OS font 
 Useful in situations where you cannot install fonts into the system font location, e.g. on CI systems.
 }
 \examples{
-register_plexsans_condensed("ibmpsc")
+register_plexsans("ibmpsc")
 }
