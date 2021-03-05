@@ -4,10 +4,24 @@
 \alias{set_ptrr_ggplot_fonts}
 \title{Mqke ggplot2 use chosen font in geom_text/label}
 \usage{
-set_ptrr_ggplot_fonts(font = "Roboto Condensed")
+set_ptrr_ggplot_fonts(
+  family = "IBM Plex Sans Condensed",
+  face = "plain",
+  size = 3.5,
+  color = "black",
+  lineheight = 0.95
+)
 }
 \arguments{
-\item{font}{font, defaults to `"Roboto Condensed"`}
+\item{face}{face, defaults to `"plain"`}
+
+\item{size}{size, defaults to 3.5}
+
+\item{color}{color, defaults to "black"}
+
+\item{lineheight}{lineheight, defaults to 0.95}
+
+\item{font}{font, defaults to `"IBM Plex Sans"`}
 }
 \description{
 Wrapper around update_geom_font_defaults(), different default

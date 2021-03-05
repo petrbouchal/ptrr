@@ -111,10 +111,23 @@ import_fonts <- function() {
 #'
 #' Wrapper around update_geom_font_defaults(), different default
 #'
-#' @param font font, defaults to `"Roboto Condensed"`
+#' @param font font, defaults to `"IBM Plex Sans"`
+#' @param face face, defaults to `"plain"`
+#' @param size size, defaults to 3.5
+#' @param lineheight lineheight, defaults to 0.95
+#' @param color color, defaults to "black"
 #' @family Font helpers and shortcuts
 #' @export
 #'
-set_ptrr_ggplot_fonts <- function(font = "Roboto Condensed") {
-  hrbrthemes::update_geom_font_defaults(font)
+set_ptrr_ggplot_fonts <- function(family = "IBM Plex Sans Condensed",
+                                  face = "plain", size = 3.5, color = "black",
+                                  lineheight = .95) {
+
+  update_geom_defaults("text", list(family = family, face = face,
+                                    lineheight = lineheight,
+                                    size = size, color = color))
+  update_geom_defaults("label", list(family = family, face = face,
+                                     lineheight = lineheight,
+                                     size = size, color = color))
+
 }
