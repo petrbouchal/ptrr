@@ -25,7 +25,8 @@ Imports:
     rhub (>= 1.1.1),
     scales (>= 1.1.0),
     systemfonts (>= 1.0.1),
-    usethis (>= 2.0.0)
+    usethis (>= 2.0.0),
+    magrittr
 Encoding: UTF-8
 Language: en
 LazyData: true
