@@ -7,6 +7,7 @@
 * incorporated quotes Lua filter into package and Rmd template and helper function
 * use non-breaking space in number formats
 * initial basic support for using IBM Plex Sans via systemfonts
+* `theme_ptrr()` now has a `map` argument
 
 # ptrr 0.2.0
 
