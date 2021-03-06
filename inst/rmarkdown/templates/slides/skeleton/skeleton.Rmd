@@ -19,6 +19,8 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       titleSlideClass: [bottom, left, inverse]
+      beforeInit: "macros.js"
+
 ---
 
 ```{r setup, include=FALSE}
@@ -40,6 +42,7 @@ library(xaringanExtra)
 library(flipbookr)
 
 ptrr::set_geom_defaults()
+ptrr::set_ptrr_ggplot_fonts()
 update_geom_defaults("rect", list(fill = "blue"))
 
 options(tibble.print_min = 20)
@@ -135,6 +138,11 @@ naučit se statistiku
 řešit "big data" / "umělou inteligenci" a další buzzwords
 
 ]
+
+---
+
+![:scale 20%](image.png)
+
 
 ---
 
