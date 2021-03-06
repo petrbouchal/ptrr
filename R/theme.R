@@ -52,6 +52,7 @@ ptclr_l <- "#e3f1ff"
 #' @param plot.title.position where to align the title. Either "plot" (the default, difference from `theme()` default) or `"panel"`.
 #' @param axis.title same as in theme(), but with a default of `element_blank()`.
 #' @param multiplot if set to TRUE, provides better styling for small multiples created using `facet_*`.
+#' @param map if set to TRUE, provides better styling for maps created using `geom_sf()`. Overrides `gridlines`.
 #' @param ... Other parameters to be passed to `theme()`.
 #'
 #' @return a ggtheme object
@@ -117,6 +118,7 @@ theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter", "none"),
                          plot.title.position = "plot",
                          axis_titles = FALSE,
                          richtext = FALSE,
+                         map = FALSE,
                          ...) {
   element_switch <- if(richtext) ggtext::element_markdown else ggplot2::element_text
 
@@ -151,6 +153,11 @@ theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter", "none"),
   if(multiplot) thm <- thm +
     ggplot2::theme(strip.background = ggplot2::element_rect(fill = tonecol,
                                                             colour = NA))
+
+  if(map) thm <- thm +
+    ggplot2::theme(panel.grid.major = ggplot2::element_blank(),
+                   axis.text.x = ggplot2::element_blank(),
+                   axis.text.y = ggplot2::element_blank())
 
   thm <- thm +
     ggplot2::theme(...)

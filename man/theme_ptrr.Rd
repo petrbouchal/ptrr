@@ -16,6 +16,7 @@ theme_ptrr(
   plot.title.position = "plot",
   axis_titles = FALSE,
   richtext = FALSE,
+  map = FALSE,
   ...
 )
 }
@@ -32,6 +33,8 @@ theme_ptrr(
 \item{margin_side, margin_bottom}{size of left and right / bottom margin around plot, in pts. Defaults to 6. Set to 0 to align flush with text in a Word document.}
 
 \item{plot.title.position}{where to align the title. Either "plot" (the default, difference from `theme()` default) or `"panel"`.}
+
+\item{map}{if set to TRUE, provides better styling for maps created using `geom_sf()`. Overrides `gridlines`.}
 
 \item{...}{Other parameters to be passed to `theme()`.}
 
