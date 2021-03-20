@@ -120,7 +120,7 @@ import_fonts <- function() {
 #' @export
 #'
 set_ptrr_ggplot_fonts <- function(family = "IBM Plex Sans Condensed",
-                                  face = "plain", size = 3.5, color = "black",
+                                  fontface = "plain", size = 3.5, color = "black",
                                   lineheight = .95) {
 
   update_geom_defaults("text", list(family = family, fontface = fontface,
