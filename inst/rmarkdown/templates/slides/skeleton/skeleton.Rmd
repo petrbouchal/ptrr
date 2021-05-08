@@ -1,6 +1,6 @@
 ---
 title: "Title"
-subtitle: "Workshop: konference EJ NOK 2020"
+subtitle: "Subtitle"
 author: "Petr Bouchal"
 date: date
 output:
@@ -107,37 +107,18 @@ class: left, middle, inverse
 ---
 class: left, top, large
 
- 1\. Ujasnit si, kdy a proč použít na data programovací jazyk (R)
+ 1\. Jedna
 
 --
 
- 2\. Naučit se vyznat se v R a RStudiu
-
---
-
- 3\. Poznat nástroje na práci s daty
-
---
-
- 4\. Poznat nástroje na tvorbu výstupů
-
---
-
- 5\. Vědět, kde a jak se učit další věci
+ 2\. Dva
 
 ---
+class: large
 
 # Large slide
 
-.large[
 
-pokrýt všechny nástroje do hloubky
-
-naučit se statistiku
-
-řešit "big data" / "umělou inteligenci" a další buzzwords
-
-]
 
 ---
 
@@ -146,13 +127,11 @@ naučit se statistiku
 
 ---
 
-class: center, middle
+class: center, middle, large
 
-.large[
 
 [petrbouchal.xyz/eval2020](https://petrbouchal.xyz/eval2020)
 
-]
 ---
 
 class: center, middle, large
@@ -183,31 +162,12 @@ gdta %>%
 
 ---
 
-class: center, middle
-
-# Poděkování
-
-EJ NOK MMR
-
-Tvůrci tidyverse
-
-Yihui Xie, tvůrce balíku xaringan (nástroj těchto slidů)
-
-Garick Aden-Buie: balíky xaringanExtra, xaringanthemr
-
-flipbookr
-
----
-
-class: inverse, bottom, right
+class: inverse, bottom, right, large
 layout: false
 
-.large[
-<a href="https://twitter.com/petrbouchal">`r fa("twitter", fill = "white")`</a> <a href="https://github.com/petrbouchal">`r fa("github", fill = "white")`</a> <a href="https://linkedin.com/in/petrbouchal">`r fa("linkedin", fill = "white")`</a> petrbouchal
-
+<a href="https://twitter.com/petrbouchal">`r fa("twitter", fill = "white")`</a> <a href="https://github.com/petrbouchal">`r fa("github", fill = "white")`</a> <a href="https://linkedin.com/in/petrbouchal">`r fa("linkedin", fill = "white")`</a> petrbouchal  
+[petrbouchal.xyz](https://petrbouchal.xyz)  
 pbouchal@gmail.com
-
-]
 
 
 
