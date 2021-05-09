@@ -3,6 +3,7 @@ title: Title
 output:
   html_document:
     css: docs.css
+    self_contained: no
     toc: false
     toc_depth: 3
     pandoc_args: !expr ptrr::pandoc_quotes()
