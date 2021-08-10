@@ -8,6 +8,7 @@
 * use non-breaking space in number formats
 * initial basic support for using IBM Plex Sans via systemfonts
 * `theme_ptrr()` now has a `map` argument
+* new utilities for building Github URLs and links and rendering README.Rmd
 
 # ptrr 0.2.0
 
