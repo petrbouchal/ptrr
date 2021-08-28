@@ -43,9 +43,10 @@ copy_word_template <- function(template = "ptrr_word", destination = NULL) {
 #' @param ... Passed to `rmarkdown::render()`
 #'
 #' @return RETURN_DESCRIPTION
+#' @export
 #' @examples
 #' # ADD_EXAMPLES_HERE
-render_readme <- function(path = "README.Rmd", output_format = "github_document", output_file = NULL) {
+render_readme <- function(path = "README.Rmd", output_format = "github_document", output_file = NULL, ...) {
   if(is.null(output_file)) output_file <- gsub("\\.Rmd$", ".md", path)
   rmarkdown::render(path, output_format, output_file, ...)
 }
@@ -62,6 +63,7 @@ render_readme <- function(path = "README.Rmd", output_format = "github_document"
 #' @param remote remote in the form of user/repo.
 #' @param branch branch. Default `"main"`
 #'
+#' @export
 #' @return character vector of same length as inputs
 #'
 #' Inputs are recycled if not all of the same length
@@ -79,6 +81,7 @@ gh_url <- function(path, repo, user = "petrbouchal", remote = NULL, branch = "ma
 #' @param text Link text
 #' @inheritParams gh_url
 #'
+#' @export
 #' @return character vector of same length as inputs
 #'
 #' Inputs are recycled if not all of the same length

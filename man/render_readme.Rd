@@ -2,26 +2,29 @@
 % Please edit documentation in R/utils.R
 \name{render_readme}
 \alias{render_readme}
-\title{FUNCTION_TITLE}
+\title{Render README.Rmd for Github}
 \usage{
 render_readme(
   path = "README.Rmd",
   output_format = "github_document",
-  output_file = "README.md"
+  output_file = NULL,
+  ...
 )
 }
 \arguments{
-\item{path}{DESCRIPTION.}
+\item{path}{path to file. Default is "README.Rmd"}
 
-\item{output_format}{DESCRIPTION.}
+\item{output_format}{output format passed to `rmarkdown::render`. Defaults to "github_document".}
 
-\item{output_file}{DESCRIPTION.}
+\item{output_file}{output format passed to `rmarkdown::render`. Defaults to "{filename}.md".}
+
+\item{...}{Passed to `rmarkdown::render()`}
 }
 \value{
 RETURN_DESCRIPTION
 }
 \description{
-FUNCTION_DESCRIPTION
+Useful when inside a Markdown website. Wrapper around `rmarkdown::render`.
 }
 \examples{
 # ADD_EXAMPLES_HERE
