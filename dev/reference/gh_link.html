@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • ptrr</title>
+<title>Produce Github link in Markdown — gh_link • ptrr</title>
 
 
 <!-- jquery -->
@@ -41,7 +41,8 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="Produce Github link in Markdown — gh_link" />
+<meta property="og:description" content="Useful for linking to files on Github that live in a local clone of a repo" />
 
 
 <meta name="robots" content="noindex">
@@ -60,7 +61,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -118,63 +119,65 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/petrbouchal/ptrr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>Produce Github link in Markdown</h1>
+    <small class="dont-index">Source: <a href='https://github.com/petrbouchal/ptrr/blob/master/R/utils.R'><code>R/utils.R</code></a></small>
+    <div class="hidden name"><code>gh_link.Rd</code></div>
     </div>
 
-    <div id="ptrr-development-version" class="section level1">
-<h1 class="page-header" data-toc-text="development version">
-<a href="#ptrr-development-version" class="anchor"></a>ptrr (development version)</h1>
-<ul>
-<li>new templates: site, repo docs pages, xaringan slides</li>
-<li>switch default font to IBM Plex Sans</li>
-<li>light tone colour is now parameterised in theme</li>
-<li>fixed logic in ptrr_word() to allow overrding docx template</li>
-<li>incorporated quotes Lua filter into package and Rmd template and helper function</li>
-<li>use non-breaking space in number formats</li>
-<li>initial basic support for using IBM Plex Sans via systemfonts</li>
-<li>
-<code><a href="../reference/theme_ptrr.html">theme_ptrr()</a></code> now has a <code>map</code> argument</li>
-<li>new utilities for building Github URLs and links and rendering README.Rmd</li>
-</ul>
-</div>
-    <div id="ptrr-020" class="section level1">
-<h1 class="page-header" data-toc-text="0.2.0">
-<a href="#ptrr-020" class="anchor"></a>ptrr 0.2.0</h1>
-<ul>
-<li>new basic Rmarkdown template</li>
-<li>new date formatting functions</li>
-<li>new ggplot2 utilities: themes, axes</li>
-<li>new number formatters</li>
-<li>new font utilities</li>
-<li>new function to set geom defaults</li>
-</ul>
-</div>
-    <div id="ptrr-010" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.0">
-<a href="#ptrr-010" class="anchor"></a>ptrr 0.1.0</h1>
-<ul>
-<li>completed <code><a href="../reference/insert_package_into_drat.html">insert_package_into_drat()</a></code>
-</li>
-</ul>
-</div>
-    <div id="ptrr-0009000" class="section level1">
-<h1 class="page-header" data-toc-text="0.0.0.9000">
-<a href="#ptrr-0009000" class="anchor"></a>ptrr 0.0.0.9000</h1>
-<ul>
-<li>added <code><a href="../reference/theme_ipr.html">theme_ipr()</a></code>
-</li>
-<li>Added a <code>NEWS.md</code> file to track changes to the package.</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    <p>Useful for linking to files on Github that live in a local clone of a repo</p>
+    </div>
 
+    <pre class="usage"><span class='fu'>gh_link</span><span class='op'>(</span>
+  text <span class='op'>=</span> <span class='cn'>NULL</span>,
+  <span class='va'>path</span>,
+  <span class='va'>repo</span>,
+  user <span class='op'>=</span> <span class='st'>"petrbouchal"</span>,
+  remote <span class='op'>=</span> <span class='cn'>NULL</span>,
+  branch <span class='op'>=</span> <span class='st'>"main"</span>
+<span class='op'>)</span></pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>text</th>
+      <td><p>Link text</p></td>
+    </tr>
+    <tr>
+      <th>path</th>
+      <td><p>path to file (the bit that goes after /tree/branch,
+so presumably the local path from project root)</p></td>
+    </tr>
+    <tr>
+      <th>repo</th>
+      <td><p>repo name; used if `remote` is not provided.</p></td>
+    </tr>
+    <tr>
+      <th>user</th>
+      <td><p>Github user; used if `remote` is not provided. Defaults to `"petrbouchal"`</p></td>
+    </tr>
+    <tr>
+      <th>remote</th>
+      <td><p>remote in the form of user/repo.</p></td>
+    </tr>
+    <tr>
+      <th>branch</th>
+      <td><p>branch. Default `"main"`</p></td>
+    </tr>
+    </table>
+
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>character vector of same length as inputs</p>
+<p>Inputs are recycled if not all of the same length</p>
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
-
 </div>
 
 

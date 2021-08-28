@@ -19,6 +19,12 @@
     <loc>http://petrbouchal.xyz/ptrr/reference/formatscz.html</loc>
   </url>
   <url>
+    <loc>http://petrbouchal.xyz/ptrr/reference/gh_link.html</loc>
+  </url>
+  <url>
+    <loc>http://petrbouchal.xyz/ptrr/reference/gh_url.html</loc>
+  </url>
+  <url>
     <loc>http://petrbouchal.xyz/ptrr/reference/import_fonts.html</loc>
   </url>
   <url>
@@ -44,6 +50,9 @@
   </url>
   <url>
     <loc>http://petrbouchal.xyz/ptrr/reference/register_plexsans_condensed.html</loc>
+  </url>
+  <url>
+    <loc>http://petrbouchal.xyz/ptrr/reference/render_readme.html</loc>
   </url>
   <url>
     <loc>http://petrbouchal.xyz/ptrr/reference/scalescz.html</loc>
