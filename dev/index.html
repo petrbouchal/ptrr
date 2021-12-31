@@ -21,6 +21,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -40,12 +42,6 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="reference/index.html">Reference</a>
 </li>
 <li>
@@ -54,13 +50,13 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/petrbouchal/ptrr/">
+  <a href="https://github.com/petrbouchal/ptrr/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="https://petrbouchal.xyz">
+  <a href="https://petrbouchal.xyz" class="external-link">
     <span class="fas fa-asterisk fa-lg"></span>
      
   </a>
@@ -77,9 +73,9 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="ptrr" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#ptrr" class="anchor"></a>ptrr</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="ptrr">ptrr<a class="anchor" aria-label="anchor" href="#ptrr"></a>
+</h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
 <p>This is a package for personal utilities.</p>
@@ -102,27 +98,27 @@
 <li>number, date and scale formatting functions</li>
 <li>Rmd templates and related utilities for repo doc, xaringan slides, and Rmd webpage</li>
 </ul>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the latest release of ptrr from <a href="https://github.com">Github</a> with:</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>You can install the latest release of ptrr from <a href="https://github.com" class="external-link">Github</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"petrbouchal/ptrr"</span>, ref <span class="op">=</span> <span class="fu">github_release</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"petrbouchal/ptrr"</span>, ref <span class="op">=</span> <span class="fu">github_release</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>The current development version is at</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"petrbouchal/ptrr"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"petrbouchal/ptrr"</span><span class="op">)</span></code></pre></div>
 <p>There are also binaries in the <code>petrbouchal/drat</code> repo; this can be installed with</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"ptrr"</span>, repos <span class="op">=</span> <span class="st">"https://petrbouchal.github.io/drat"</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ptrr"</span>, repos <span class="op">=</span> <span class="st">"https://petrbouchal.github.io/drat"</span><span class="op">)</span>
 <span class="co">#&gt; Installing package into '/Users/petr/Library/R/4.0/library'</span>
 <span class="co">#&gt; (as 'lib' is unspecified)</span>
 <span class="co">#&gt; installing the source package 'ptrr'</span></code></pre></div>
 </div>
-<div id="todo" class="section level2">
-<h2 class="hasAnchor">
-<a href="#todo" class="anchor"></a>TODO</h2>
+<div class="section level2">
+<h2 id="todo">TODO<a class="anchor" aria-label="anchor" href="#todo"></a>
+</h2>
 <ul>
-<li>rounding function <a href="https://twitter.com/hspter/status/314858331598626816" class="uri">https://twitter.com/hspter/status/314858331598626816</a>
+<li>rounding function <a href="https://twitter.com/hspter/status/314858331598626816" class="external-link uri">https://twitter.com/hspter/status/314858331598626816</a>
 </li>
 <li>Czech scales</li>
 <li>Czech units</li>
@@ -133,39 +129,51 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/petrbouchal/ptrr/">https://​github.com/​petrbouchal/​ptrr/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/petrbouchal/ptrr/issues">https://​github.com/​petrbouchal/​ptrr/​issues</a>
-</li>
+<li><a href="https://github.com/petrbouchal/ptrr/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/petrbouchal/ptrr/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
+<li><small><a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing ptrr</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://petrbouchal.xyz">Petr Bouchal</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-0471-716X" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<a href="https://petrbouchal.xyz" class="external-link">Petr Bouchal</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-0471-716X" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
+
+
 
   </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://petrbouchal.xyz">Petr Bouchal</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://petrbouchal.xyz" class="external-link">Petr Bouchal</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
       </footer>
@@ -173,6 +181,8 @@
 
   
 
+
+  
 
   </body>
 </html>

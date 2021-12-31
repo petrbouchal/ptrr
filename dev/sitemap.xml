@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://petrbouchal.xyz/ptrr/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>http://petrbouchal.xyz/ptrr/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>http://petrbouchal.xyz/ptrr/authors.html</loc>
+  </url>
+  <url>
     <loc>http://petrbouchal.xyz/ptrr/index.html</loc>
+  </url>
+  <url>
+    <loc>http://petrbouchal.xyz/ptrr/news/index.html</loc>
   </url>
   <url>
     <loc>http://petrbouchal.xyz/ptrr/reference/Colours.html</loc>
@@ -29,6 +41,9 @@
   </url>
   <url>
     <loc>http://petrbouchal.xyz/ptrr/reference/import_roboto.html</loc>
+  </url>
+  <url>
+    <loc>http://petrbouchal.xyz/ptrr/reference/index.html</loc>
   </url>
   <url>
     <loc>http://petrbouchal.xyz/ptrr/reference/insert_package_into_drat.html</loc>
