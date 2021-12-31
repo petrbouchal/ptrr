@@ -53,7 +53,9 @@ ptclr_l <- "#e3f1ff"
 #' @param axis.title same as in theme(), but with a default of `element_blank()`.
 #' @param multiplot if set to TRUE, provides better styling for small multiples created using `facet_*`.
 #' @param map if set to TRUE, provides better styling for maps created using `geom_sf()`. Overrides `gridlines`.
-#' @param ... Other parameters to be passed to `theme()`.
+#' @inheritDotParams ggplot2::theme -text -plot.title -panel.grid.minor
+#'   -panel.grid.major.x -panel.grid.major.y -panel.background -axis.title
+#'   -strip.text.x -plot.margin -strip.background
 #'
 #' @return a ggtheme object
 #' @family Making charts

@@ -30,7 +30,7 @@ Imports:
 Encoding: UTF-8
 Language: en
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Suggests: 
     ragg (>= 1.1.0),
     rmarkdown (>= 2.7),
