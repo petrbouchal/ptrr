@@ -19,9 +19,6 @@
     <loc>http://petrbouchal.xyz/ptrr/reference/Colours.html</loc>
   </url>
   <url>
-    <loc>http://petrbouchal.xyz/ptrr/reference/Roboto.html</loc>
-  </url>
-  <url>
     <loc>http://petrbouchal.xyz/ptrr/reference/flush_axis.html</loc>
   </url>
   <url>
@@ -37,16 +34,7 @@
     <loc>http://petrbouchal.xyz/ptrr/reference/gh_url.html</loc>
   </url>
   <url>
-    <loc>http://petrbouchal.xyz/ptrr/reference/import_fonts.html</loc>
-  </url>
-  <url>
-    <loc>http://petrbouchal.xyz/ptrr/reference/import_roboto.html</loc>
-  </url>
-  <url>
     <loc>http://petrbouchal.xyz/ptrr/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>http://petrbouchal.xyz/ptrr/reference/insert_package_into_drat.html</loc>
   </url>
   <url>
     <loc>http://petrbouchal.xyz/ptrr/reference/pandoc_quotes.html</loc>
