@@ -1,5 +1,7 @@
 # ptrr (development version)
 
+* removed font functions relying on {extrafont}
+* removed drat/rhub functions
 * new templates: site, repo docs pages, xaringan slides
 * switch default font to IBM Plex Sans
 * light tone colour is now parameterised in theme

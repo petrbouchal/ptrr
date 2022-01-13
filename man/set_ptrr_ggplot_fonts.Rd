@@ -2,7 +2,7 @@
 % Please edit documentation in R/fonts.R
 \name{set_ptrr_ggplot_fonts}
 \alias{set_ptrr_ggplot_fonts}
-\title{Mqke ggplot2 use chosen font in geom_text/label}
+\title{Make ggplot2 use chosen font in geom_text/label}
 \usage{
 set_ptrr_ggplot_fonts(
   family = "IBM Plex Sans Condensed",
@@ -25,11 +25,5 @@ set_ptrr_ggplot_fonts(
 }
 \description{
 Wrapper around update_geom_font_defaults(), different default
-}
-\seealso{
-Other Font helpers and shortcuts: 
-\code{\link{font_rc}},
-\code{\link{import_fonts}()},
-\code{\link{import_roboto}()}
 }
 \concept{Font helpers and shortcuts}

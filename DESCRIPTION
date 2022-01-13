@@ -15,8 +15,6 @@ BugReports: https://github.com/petrbouchal/ptrr/issues
 Imports: 
     callr (>= 3.4.2),
     devtools (>= 2.2.2),
-    drat (>= 0.1.5),
-    extrafont,
     ggplot2 (>= 3.3.0),
     ggtext (>= 0.1.1),
     git2r (>= 0.26.1),
