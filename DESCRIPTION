@@ -13,14 +13,9 @@ License: MIT + file LICENSE
 URL: http://petrbouchal.xyz/ptrr, https://github.com/petrbouchal/ptrr
 BugReports: https://github.com/petrbouchal/ptrr/issues
 Imports: 
-    callr (>= 3.4.2),
-    devtools (>= 2.2.2),
     ggplot2 (>= 3.3.0),
     ggtext (>= 0.1.1),
-    git2r (>= 0.26.1),
     hrbrthemes (>= 0.8.0),
-    pkgbuild (>= 1.0.6),
-    rhub (>= 1.1.1),
     scales (>= 1.1.0),
     systemfonts (>= 1.0.1),
     usethis (>= 2.0.0),
