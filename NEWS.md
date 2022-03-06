@@ -1,4 +1,4 @@
-# ptrr (development version)
+# ptrr 0.2.1
 
 * add excel() function for viewing data in Excel
 * update lua filter to latest at https://github.com/pandoc/lua-filters/blob/master/pandoc-quotes.lua/pandoc-quotes.lua
