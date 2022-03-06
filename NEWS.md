@@ -1,5 +1,7 @@
 # ptrr (development version)
 
+* add excel() function for viewing data in Excel
+* update lua filter to latest at https://github.com/pandoc/lua-filters/blob/master/pandoc-quotes.lua/pandoc-quotes.lua
 * removed font functions relying on {extrafont}
 * removed drat/rhub functions
 * new templates: site, repo docs pages, xaringan slides
