@@ -1,6 +1,6 @@
 Package: ptrr
 Title: Personal utilities
-Version: 0.2.1
+Version: 0.2.1.9000
 Authors@R: 
     person(given = "Petr",
            family = "Bouchal",
@@ -14,7 +14,6 @@ URL: http://petrbouchal.xyz/ptrr, https://github.com/petrbouchal/ptrr
 BugReports: https://github.com/petrbouchal/ptrr/issues
 Imports: 
     ggplot2 (>= 3.3.0),
-    ggtext (>= 0.1.1),
     hrbrthemes (>= 0.8.0),
     scales (>= 1.1.0),
     systemfonts (>= 1.0.1),
@@ -22,8 +21,9 @@ Imports:
     magrittr
 Encoding: UTF-8
 Language: en
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 Suggests: 
     ragg (>= 1.1.0),
     rmarkdown (>= 2.7),
-    knitr (>= 1.31)
+    knitr (>= 1.31),
+    ggtext (>= 0.1.1)

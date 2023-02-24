@@ -122,6 +122,11 @@ theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter", "none"),
                          richtext = FALSE,
                          map = FALSE,
                          ...) {
+
+  if(richtext) {
+    if(!requireNamespace("ggtext")) stop("Package ggtext needed.")
+  }
+
   element_switch <- if(richtext) ggtext::element_markdown else ggplot2::element_text
 
   grd <- match.arg(gridlines)
@@ -144,7 +149,6 @@ theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter", "none"),
                    panel.background = ggplot2::element_rect(fill = bg_col,
                                                             colour = NA),
                    axis.title = if(axis_titles) element_switch() else ggplot2::element_blank(),
-                   # text = element_switch(),
                    strip.text.x = element_switch(hjust = 0),
                    strip.text.y = element_switch(hjust = 0),
                    axis.text.x = element_switch(),
@@ -200,3 +204,5 @@ set_geom_defaults <- function(color = "blue") {
     "line", list(color = color, size = 1.5)
   )
 }
+
+

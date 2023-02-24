@@ -35,6 +35,11 @@
 #' # ADD_EXAMPLES_HERE
 theme_ipr <- function(grid = "both", richtext = F, axis_titles = F, scatter = F,
                       base_size = 12, family = "Unit Pro", title_family = "Unit Slab Pro", side_margin = 5.5) {
+
+  if(richtext) {
+    if(!requireNamespace("ggtext")) stop("Package ggtext needed.")
+  }
+
   element_switch <- if(richtext) ggtext::element_markdown else ggplot2::element_text
   x <- ggplot2::theme_minimal(base_size = base_size) +
     ggplot2::theme(text = element_switch(size = base_size, family = family),

@@ -1,3 +1,8 @@
+# ptrr (development version)
+
+* `{ggtext}` now only in Suggests
+* `ggsave_*` functions for Twitter and Facebook images
+
 # ptrr 0.2.1
 
 * add excel() function for viewing data in Excel

@@ -10,8 +10,8 @@ label_percent_cz(
   accuracy = NULL,
   scale = 100,
   prefix = "",
-  suffix = " \%",
-  big.mark = " ",
+  suffix = " \%",
+  big.mark = " ",
   decimal.mark = ",",
   trim = TRUE,
   ...
@@ -22,7 +22,7 @@ label_number_cz(
   scale = 1,
   prefix = "",
   suffix = "",
-  big.mark = " ",
+  big.mark = " ",
   decimal.mark = ",",
   trim = TRUE,
   ...
@@ -37,12 +37,14 @@ difference between adjacent values.
 Applied to rescaled data.}
 
 \item{scale}{A scaling factor: \code{x} will be multiplied by \code{scale} before
-formating. This is useful if the underlying data is very small or very
+formatting. This is useful if the underlying data is very small or very
 large.}
 
-\item{prefix}{Symbols to display before and after value.}
+\item{prefix}{Additional text to display before the number. The suffix is
+applied to absolute value before \code{style_positive} and \code{style_negative} are
+processed so that \code{prefix = "$"} will yield (e.g.) \verb{-$1} and \verb{($1)}.}
 
-\item{suffix}{Symbols to display before and after value.}
+\item{suffix}{Additional text to display after the number.}
 
 \item{big.mark}{Character used between every 3 digits to separate thousands.}
 
