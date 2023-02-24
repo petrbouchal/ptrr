@@ -19,6 +19,9 @@
     <loc>http://petrbouchal.xyz/ptrr/reference/Colours.html</loc>
   </url>
   <url>
+    <loc>http://petrbouchal.xyz/ptrr/reference/excel.html</loc>
+  </url>
+  <url>
     <loc>http://petrbouchal.xyz/ptrr/reference/flush_axis.html</loc>
   </url>
   <url>
@@ -26,6 +29,12 @@
   </url>
   <url>
     <loc>http://petrbouchal.xyz/ptrr/reference/formatscz.html</loc>
+  </url>
+  <url>
+    <loc>http://petrbouchal.xyz/ptrr/reference/ggsave_facebook.html</loc>
+  </url>
+  <url>
+    <loc>http://petrbouchal.xyz/ptrr/reference/ggsave_twitter.html</loc>
   </url>
   <url>
     <loc>http://petrbouchal.xyz/ptrr/reference/gh_link.html</loc>

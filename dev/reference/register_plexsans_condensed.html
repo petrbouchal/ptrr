@@ -18,7 +18,7 @@ Useful in situations where you cannot install fonts into the system font locatio
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ptrr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.1.9000</span>
       </span>
     </div>
 
@@ -61,30 +61,37 @@ Useful in situations where you cannot install fonts into the system font locatio
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">register_plexsans_condensed</span><span class="op">(</span>
-  family <span class="op">=</span> <span class="st">"IBM Plex Sans Condensed"</span>,
-  features <span class="op">=</span> <span class="cn">NULL</span>,
-  warn <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">register_plexsans_condensed</span><span class="op">(</span></span>
+<span>  family <span class="op">=</span> <span class="st">"IBM Plex Sans Condensed"</span>,</span>
+<span>  features <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  warn <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>family</dt>
 <dd><p>What you want the resulting font family to be called in the registry. Defaults to "IBM Plex Sans Condensed"</p></dd>
+
+
 <dt>features</dt>
 <dd><p>Unused for now</p></dd>
+
+
 <dt>warn</dt>
 <dd><p>Whether to warn when a font family of the same name already exists. Defaults to TRUE.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>TRUE if a font was successfully registered, FALSE otherwise. Called for side effects.</p>
+    
+
+<p>TRUE if a font was successfully registered, FALSE otherwise. Called for side effects.</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">register_plexsans_condensed</span><span class="op">(</span><span class="st">"ibmps"</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">register_plexsans_condensed</span><span class="op">(</span><span class="st">"ibmps"</span><span class="op">)</span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -99,7 +106,7 @@ Useful in situations where you cannot install fonts into the system font locatio
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

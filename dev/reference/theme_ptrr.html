@@ -18,7 +18,7 @@ and several defaults. See more in Details."><meta name="robots" content="noindex
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ptrr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.1.9000</span>
       </span>
     </div>
 
@@ -61,21 +61,21 @@ and several defaults. See more in Details.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">theme_ptrr</span><span class="op">(</span>
-  gridlines <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"y"</span>, <span class="st">"x"</span>, <span class="st">"both"</span>, <span class="st">"scatter"</span>, <span class="st">"none"</span><span class="op">)</span>,
-  base_size <span class="op">=</span> <span class="fl">11</span>,
-  family <span class="op">=</span> <span class="st">"IBM Plex Sans Condensed"</span>,
-  title_family <span class="op">=</span> <span class="st">"IBM Plex Sans"</span>,
-  multiplot <span class="op">=</span> <span class="cn">FALSE</span>,
-  tonecol <span class="op">=</span> <span class="va">ptclr_l</span>,
-  margin_side <span class="op">=</span> <span class="fl">6</span>,
-  margin_bottom <span class="op">=</span> <span class="fl">6</span>,
-  plot.title.position <span class="op">=</span> <span class="st">"plot"</span>,
-  axis_titles <span class="op">=</span> <span class="cn">FALSE</span>,
-  richtext <span class="op">=</span> <span class="cn">FALSE</span>,
-  map <span class="op">=</span> <span class="cn">FALSE</span>,
-  <span class="va">...</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">theme_ptrr</span><span class="op">(</span></span>
+<span>  gridlines <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"y"</span>, <span class="st">"x"</span>, <span class="st">"both"</span>, <span class="st">"scatter"</span>, <span class="st">"none"</span><span class="op">)</span>,</span>
+<span>  base_size <span class="op">=</span> <span class="fl">11</span>,</span>
+<span>  family <span class="op">=</span> <span class="st">"IBM Plex Sans Condensed"</span>,</span>
+<span>  title_family <span class="op">=</span> <span class="st">"IBM Plex Sans"</span>,</span>
+<span>  multiplot <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  tonecol <span class="op">=</span> <span class="va">ptclr_l</span>,</span>
+<span>  margin_side <span class="op">=</span> <span class="fl">6</span>,</span>
+<span>  margin_bottom <span class="op">=</span> <span class="fl">6</span>,</span>
+<span>  plot.title.position <span class="op">=</span> <span class="st">"plot"</span>,</span>
+<span>  axis_titles <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  richtext <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  map <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -83,18 +83,32 @@ and several defaults. See more in Details.</p>
     <dl><dt>gridlines</dt>
 <dd><p>Whether to display major gridlines along `"y"` (the default),
 `"x"`, `"both"` or draw a `"scatter"`, which has both gridlines and inverted colours.</p></dd>
+
+
 <dt>base_size</dt>
 <dd><p>Numeric text size in pts, affects all text in plot. Defaults to 11.</p></dd>
+
+
 <dt>family, title_family</dt>
 <dd><p>font family to use for the (title of the) plot. Defaults to `"IBM Plex Sans"` for title and `"IBM Plex Sans Condensed"` for plot.</p></dd>
+
+
 <dt>multiplot</dt>
 <dd><p>if set to TRUE, provides better styling for small multiples created using `facet_*`.</p></dd>
+
+
 <dt>margin_side, margin_bottom</dt>
 <dd><p>size of left and right / bottom margin around plot, in pts. Defaults to 6. Set to 0 to align flush with text in a Word document.</p></dd>
+
+
 <dt>plot.title.position</dt>
 <dd><p>where to align the title. Either "plot" (the default, difference from `theme()` default) or `"panel"`.</p></dd>
+
+
 <dt>map</dt>
 <dd><p>if set to TRUE, provides better styling for maps created using `geom_sf()`. Overrides `gridlines`.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Arguments passed on to <code><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">ggplot2::theme</a></code></p><dl><dt><code>line</code></dt>
 <dd><p>all line elements (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>)</p></dd>
@@ -109,55 +123,7 @@ inherits from <code>text</code>)</p></dd>
     <dt><code>aspect.ratio</code></dt>
 <dd><p>aspect ratio of the panel</p></dd>
 
-    <dt><code>axis.title.x</code></dt>
-<dd><p>labels of axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>). Specify all axes' labels (<code>axis.title</code>),
-labels by plane (using <code>axis.title.x</code> or <code>axis.title.y</code>), or individually
-for each axis (using <code>axis.title.x.bottom</code>, <code>axis.title.x.top</code>,
-<code>axis.title.y.left</code>, <code>axis.title.y.right</code>). <code>axis.title.*.*</code> inherits from
-<code>axis.title.*</code> which inherits from <code>axis.title</code>, which in turn inherits
-from <code>text</code></p></dd>
-
-    <dt><code>axis.title.y</code></dt>
-<dd><p>labels of axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>). Specify all axes' labels (<code>axis.title</code>),
-labels by plane (using <code>axis.title.x</code> or <code>axis.title.y</code>), or individually
-for each axis (using <code>axis.title.x.bottom</code>, <code>axis.title.x.top</code>,
-<code>axis.title.y.left</code>, <code>axis.title.y.right</code>). <code>axis.title.*.*</code> inherits from
-<code>axis.title.*</code> which inherits from <code>axis.title</code>, which in turn inherits
-from <code>text</code></p></dd>
-
-    <dt><code>axis.title.x.top</code></dt>
-<dd><p>labels of axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>). Specify all axes' labels (<code>axis.title</code>),
-labels by plane (using <code>axis.title.x</code> or <code>axis.title.y</code>), or individually
-for each axis (using <code>axis.title.x.bottom</code>, <code>axis.title.x.top</code>,
-<code>axis.title.y.left</code>, <code>axis.title.y.right</code>). <code>axis.title.*.*</code> inherits from
-<code>axis.title.*</code> which inherits from <code>axis.title</code>, which in turn inherits
-from <code>text</code></p></dd>
-
-    <dt><code>axis.title.x.bottom</code></dt>
-<dd><p>labels of axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>). Specify all axes' labels (<code>axis.title</code>),
-labels by plane (using <code>axis.title.x</code> or <code>axis.title.y</code>), or individually
-for each axis (using <code>axis.title.x.bottom</code>, <code>axis.title.x.top</code>,
-<code>axis.title.y.left</code>, <code>axis.title.y.right</code>). <code>axis.title.*.*</code> inherits from
-<code>axis.title.*</code> which inherits from <code>axis.title</code>, which in turn inherits
-from <code>text</code></p></dd>
-
-    <dt><code>axis.title.y.left</code></dt>
-<dd><p>labels of axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>). Specify all axes' labels (<code>axis.title</code>),
-labels by plane (using <code>axis.title.x</code> or <code>axis.title.y</code>), or individually
-for each axis (using <code>axis.title.x.bottom</code>, <code>axis.title.x.top</code>,
-<code>axis.title.y.left</code>, <code>axis.title.y.right</code>). <code>axis.title.*.*</code> inherits from
-<code>axis.title.*</code> which inherits from <code>axis.title</code>, which in turn inherits
-from <code>text</code></p></dd>
-
-    <dt><code>axis.title.y.right</code></dt>
-<dd><p>labels of axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>). Specify all axes' labels (<code>axis.title</code>),
-labels by plane (using <code>axis.title.x</code> or <code>axis.title.y</code>), or individually
-for each axis (using <code>axis.title.x.bottom</code>, <code>axis.title.x.top</code>,
-<code>axis.title.y.left</code>, <code>axis.title.y.right</code>). <code>axis.title.*.*</code> inherits from
-<code>axis.title.*</code> which inherits from <code>axis.title</code>, which in turn inherits
-from <code>text</code></p></dd>
-
-    <dt><code>axis.text</code></dt>
+    <dt><code>axis.text,axis.text.x,axis.text.y,axis.text.x.top,axis.text.x.bottom,axis.text.y.left,axis.text.y.right</code></dt>
 <dd><p>tick labels along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>). Specify all axis tick labels (<code>axis.text</code>),
 tick labels by plane (using <code>axis.text.x</code> or <code>axis.text.y</code>), or individually
 for each axis (using <code>axis.text.x.bottom</code>, <code>axis.text.x.top</code>,
@@ -165,55 +131,7 @@ for each axis (using <code>axis.text.x.bottom</code>, <code>axis.text.x.top</cod
 <code>axis.text.*</code> which inherits from <code>axis.text</code>, which in turn inherits
 from <code>text</code></p></dd>
 
-    <dt><code>axis.text.x</code></dt>
-<dd><p>tick labels along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>). Specify all axis tick labels (<code>axis.text</code>),
-tick labels by plane (using <code>axis.text.x</code> or <code>axis.text.y</code>), or individually
-for each axis (using <code>axis.text.x.bottom</code>, <code>axis.text.x.top</code>,
-<code>axis.text.y.left</code>, <code>axis.text.y.right</code>). <code>axis.text.*.*</code> inherits from
-<code>axis.text.*</code> which inherits from <code>axis.text</code>, which in turn inherits
-from <code>text</code></p></dd>
-
-    <dt><code>axis.text.y</code></dt>
-<dd><p>tick labels along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>). Specify all axis tick labels (<code>axis.text</code>),
-tick labels by plane (using <code>axis.text.x</code> or <code>axis.text.y</code>), or individually
-for each axis (using <code>axis.text.x.bottom</code>, <code>axis.text.x.top</code>,
-<code>axis.text.y.left</code>, <code>axis.text.y.right</code>). <code>axis.text.*.*</code> inherits from
-<code>axis.text.*</code> which inherits from <code>axis.text</code>, which in turn inherits
-from <code>text</code></p></dd>
-
-    <dt><code>axis.text.x.top</code></dt>
-<dd><p>tick labels along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>). Specify all axis tick labels (<code>axis.text</code>),
-tick labels by plane (using <code>axis.text.x</code> or <code>axis.text.y</code>), or individually
-for each axis (using <code>axis.text.x.bottom</code>, <code>axis.text.x.top</code>,
-<code>axis.text.y.left</code>, <code>axis.text.y.right</code>). <code>axis.text.*.*</code> inherits from
-<code>axis.text.*</code> which inherits from <code>axis.text</code>, which in turn inherits
-from <code>text</code></p></dd>
-
-    <dt><code>axis.text.x.bottom</code></dt>
-<dd><p>tick labels along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>). Specify all axis tick labels (<code>axis.text</code>),
-tick labels by plane (using <code>axis.text.x</code> or <code>axis.text.y</code>), or individually
-for each axis (using <code>axis.text.x.bottom</code>, <code>axis.text.x.top</code>,
-<code>axis.text.y.left</code>, <code>axis.text.y.right</code>). <code>axis.text.*.*</code> inherits from
-<code>axis.text.*</code> which inherits from <code>axis.text</code>, which in turn inherits
-from <code>text</code></p></dd>
-
-    <dt><code>axis.text.y.left</code></dt>
-<dd><p>tick labels along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>). Specify all axis tick labels (<code>axis.text</code>),
-tick labels by plane (using <code>axis.text.x</code> or <code>axis.text.y</code>), or individually
-for each axis (using <code>axis.text.x.bottom</code>, <code>axis.text.x.top</code>,
-<code>axis.text.y.left</code>, <code>axis.text.y.right</code>). <code>axis.text.*.*</code> inherits from
-<code>axis.text.*</code> which inherits from <code>axis.text</code>, which in turn inherits
-from <code>text</code></p></dd>
-
-    <dt><code>axis.text.y.right</code></dt>
-<dd><p>tick labels along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>). Specify all axis tick labels (<code>axis.text</code>),
-tick labels by plane (using <code>axis.text.x</code> or <code>axis.text.y</code>), or individually
-for each axis (using <code>axis.text.x.bottom</code>, <code>axis.text.x.top</code>,
-<code>axis.text.y.left</code>, <code>axis.text.y.right</code>). <code>axis.text.*.*</code> inherits from
-<code>axis.text.*</code> which inherits from <code>axis.text</code>, which in turn inherits
-from <code>text</code></p></dd>
-
-    <dt><code>axis.ticks</code></dt>
+    <dt><code>axis.ticks,axis.ticks.x,axis.ticks.x.top,axis.ticks.x.bottom,axis.ticks.y,axis.ticks.y.left,axis.ticks.y.right</code></dt>
 <dd><p>tick marks along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify all tick marks (<code>axis.ticks</code>),
 ticks by plane (using <code>axis.ticks.x</code> or <code>axis.ticks.y</code>), or individually
 for each axis (using <code>axis.ticks.x.bottom</code>, <code>axis.ticks.x.top</code>,
@@ -221,124 +139,10 @@ for each axis (using <code>axis.ticks.x.bottom</code>, <code>axis.ticks.x.top</c
 <code>axis.ticks.*</code> which inherits from <code>axis.ticks</code>, which in turn inherits
 from <code>line</code></p></dd>
 
-    <dt><code>axis.ticks.x</code></dt>
-<dd><p>tick marks along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify all tick marks (<code>axis.ticks</code>),
-ticks by plane (using <code>axis.ticks.x</code> or <code>axis.ticks.y</code>), or individually
-for each axis (using <code>axis.ticks.x.bottom</code>, <code>axis.ticks.x.top</code>,
-<code>axis.ticks.y.left</code>, <code>axis.ticks.y.right</code>). <code>axis.ticks.*.*</code> inherits from
-<code>axis.ticks.*</code> which inherits from <code>axis.ticks</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>axis.ticks.x.top</code></dt>
-<dd><p>tick marks along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify all tick marks (<code>axis.ticks</code>),
-ticks by plane (using <code>axis.ticks.x</code> or <code>axis.ticks.y</code>), or individually
-for each axis (using <code>axis.ticks.x.bottom</code>, <code>axis.ticks.x.top</code>,
-<code>axis.ticks.y.left</code>, <code>axis.ticks.y.right</code>). <code>axis.ticks.*.*</code> inherits from
-<code>axis.ticks.*</code> which inherits from <code>axis.ticks</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>axis.ticks.x.bottom</code></dt>
-<dd><p>tick marks along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify all tick marks (<code>axis.ticks</code>),
-ticks by plane (using <code>axis.ticks.x</code> or <code>axis.ticks.y</code>), or individually
-for each axis (using <code>axis.ticks.x.bottom</code>, <code>axis.ticks.x.top</code>,
-<code>axis.ticks.y.left</code>, <code>axis.ticks.y.right</code>). <code>axis.ticks.*.*</code> inherits from
-<code>axis.ticks.*</code> which inherits from <code>axis.ticks</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>axis.ticks.y</code></dt>
-<dd><p>tick marks along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify all tick marks (<code>axis.ticks</code>),
-ticks by plane (using <code>axis.ticks.x</code> or <code>axis.ticks.y</code>), or individually
-for each axis (using <code>axis.ticks.x.bottom</code>, <code>axis.ticks.x.top</code>,
-<code>axis.ticks.y.left</code>, <code>axis.ticks.y.right</code>). <code>axis.ticks.*.*</code> inherits from
-<code>axis.ticks.*</code> which inherits from <code>axis.ticks</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>axis.ticks.y.left</code></dt>
-<dd><p>tick marks along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify all tick marks (<code>axis.ticks</code>),
-ticks by plane (using <code>axis.ticks.x</code> or <code>axis.ticks.y</code>), or individually
-for each axis (using <code>axis.ticks.x.bottom</code>, <code>axis.ticks.x.top</code>,
-<code>axis.ticks.y.left</code>, <code>axis.ticks.y.right</code>). <code>axis.ticks.*.*</code> inherits from
-<code>axis.ticks.*</code> which inherits from <code>axis.ticks</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>axis.ticks.y.right</code></dt>
-<dd><p>tick marks along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify all tick marks (<code>axis.ticks</code>),
-ticks by plane (using <code>axis.ticks.x</code> or <code>axis.ticks.y</code>), or individually
-for each axis (using <code>axis.ticks.x.bottom</code>, <code>axis.ticks.x.top</code>,
-<code>axis.ticks.y.left</code>, <code>axis.ticks.y.right</code>). <code>axis.ticks.*.*</code> inherits from
-<code>axis.ticks.*</code> which inherits from <code>axis.ticks</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>axis.ticks.length</code></dt>
+    <dt><code>axis.ticks.length,axis.ticks.length.x,axis.ticks.length.x.top,axis.ticks.length.x.bottom,axis.ticks.length.y,axis.ticks.length.y.left,axis.ticks.length.y.right</code></dt>
 <dd><p>length of tick marks (<code>unit</code>)</p></dd>
 
-    <dt><code>axis.ticks.length.x</code></dt>
-<dd><p>length of tick marks (<code>unit</code>)</p></dd>
-
-    <dt><code>axis.ticks.length.x.top</code></dt>
-<dd><p>length of tick marks (<code>unit</code>)</p></dd>
-
-    <dt><code>axis.ticks.length.x.bottom</code></dt>
-<dd><p>length of tick marks (<code>unit</code>)</p></dd>
-
-    <dt><code>axis.ticks.length.y</code></dt>
-<dd><p>length of tick marks (<code>unit</code>)</p></dd>
-
-    <dt><code>axis.ticks.length.y.left</code></dt>
-<dd><p>length of tick marks (<code>unit</code>)</p></dd>
-
-    <dt><code>axis.ticks.length.y.right</code></dt>
-<dd><p>length of tick marks (<code>unit</code>)</p></dd>
-
-    <dt><code>axis.line</code></dt>
-<dd><p>lines along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify lines along all axes (<code>axis.line</code>),
-lines for each plane (using <code>axis.line.x</code> or <code>axis.line.y</code>), or individually
-for each axis (using <code>axis.line.x.bottom</code>, <code>axis.line.x.top</code>,
-<code>axis.line.y.left</code>, <code>axis.line.y.right</code>). <code>axis.line.*.*</code> inherits from
-<code>axis.line.*</code> which inherits from <code>axis.line</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>axis.line.x</code></dt>
-<dd><p>lines along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify lines along all axes (<code>axis.line</code>),
-lines for each plane (using <code>axis.line.x</code> or <code>axis.line.y</code>), or individually
-for each axis (using <code>axis.line.x.bottom</code>, <code>axis.line.x.top</code>,
-<code>axis.line.y.left</code>, <code>axis.line.y.right</code>). <code>axis.line.*.*</code> inherits from
-<code>axis.line.*</code> which inherits from <code>axis.line</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>axis.line.x.top</code></dt>
-<dd><p>lines along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify lines along all axes (<code>axis.line</code>),
-lines for each plane (using <code>axis.line.x</code> or <code>axis.line.y</code>), or individually
-for each axis (using <code>axis.line.x.bottom</code>, <code>axis.line.x.top</code>,
-<code>axis.line.y.left</code>, <code>axis.line.y.right</code>). <code>axis.line.*.*</code> inherits from
-<code>axis.line.*</code> which inherits from <code>axis.line</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>axis.line.x.bottom</code></dt>
-<dd><p>lines along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify lines along all axes (<code>axis.line</code>),
-lines for each plane (using <code>axis.line.x</code> or <code>axis.line.y</code>), or individually
-for each axis (using <code>axis.line.x.bottom</code>, <code>axis.line.x.top</code>,
-<code>axis.line.y.left</code>, <code>axis.line.y.right</code>). <code>axis.line.*.*</code> inherits from
-<code>axis.line.*</code> which inherits from <code>axis.line</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>axis.line.y</code></dt>
-<dd><p>lines along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify lines along all axes (<code>axis.line</code>),
-lines for each plane (using <code>axis.line.x</code> or <code>axis.line.y</code>), or individually
-for each axis (using <code>axis.line.x.bottom</code>, <code>axis.line.x.top</code>,
-<code>axis.line.y.left</code>, <code>axis.line.y.right</code>). <code>axis.line.*.*</code> inherits from
-<code>axis.line.*</code> which inherits from <code>axis.line</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>axis.line.y.left</code></dt>
-<dd><p>lines along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify lines along all axes (<code>axis.line</code>),
-lines for each plane (using <code>axis.line.x</code> or <code>axis.line.y</code>), or individually
-for each axis (using <code>axis.line.x.bottom</code>, <code>axis.line.x.top</code>,
-<code>axis.line.y.left</code>, <code>axis.line.y.right</code>). <code>axis.line.*.*</code> inherits from
-<code>axis.line.*</code> which inherits from <code>axis.line</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>axis.line.y.right</code></dt>
+    <dt><code>axis.line,axis.line.x,axis.line.x.top,axis.line.x.bottom,axis.line.y,axis.line.y.left,axis.line.y.right</code></dt>
 <dd><p>lines along axes (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify lines along all axes (<code>axis.line</code>),
 lines for each plane (using <code>axis.line.x</code> or <code>axis.line.y</code>), or individually
 for each axis (using <code>axis.line.x.bottom</code>, <code>axis.line.x.top</code>,
@@ -353,15 +157,7 @@ from <code>rect</code>)</p></dd>
     <dt><code>legend.margin</code></dt>
 <dd><p>the margin around each legend (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">margin()</a></code>)</p></dd>
 
-    <dt><code>legend.spacing</code></dt>
-<dd><p>the spacing between legends (<code>unit</code>). <code>legend.spacing.x</code> &amp; <code>legend.spacing.y</code>
-inherit from <code>legend.spacing</code> or can be specified separately</p></dd>
-
-    <dt><code>legend.spacing.x</code></dt>
-<dd><p>the spacing between legends (<code>unit</code>). <code>legend.spacing.x</code> &amp; <code>legend.spacing.y</code>
-inherit from <code>legend.spacing</code> or can be specified separately</p></dd>
-
-    <dt><code>legend.spacing.y</code></dt>
+    <dt><code>legend.spacing,legend.spacing.x,legend.spacing.y</code></dt>
 <dd><p>the spacing between legends (<code>unit</code>). <code>legend.spacing.x</code> &amp; <code>legend.spacing.y</code>
 inherit from <code>legend.spacing</code> or can be specified separately</p></dd>
 
@@ -369,15 +165,7 @@ inherit from <code>legend.spacing</code> or can be specified separately</p></dd>
 <dd><p>background underneath legend keys (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_rect()</a></code>;
 inherits from <code>rect</code>)</p></dd>
 
-    <dt><code>legend.key.size</code></dt>
-<dd><p>size of legend keys (<code>unit</code>); key background height &amp; width inherit from
-<code>legend.key.size</code> or can be specified separately</p></dd>
-
-    <dt><code>legend.key.height</code></dt>
-<dd><p>size of legend keys (<code>unit</code>); key background height &amp; width inherit from
-<code>legend.key.size</code> or can be specified separately</p></dd>
-
-    <dt><code>legend.key.width</code></dt>
+    <dt><code>legend.key.size,legend.key.height,legend.key.width</code></dt>
 <dd><p>size of legend keys (<code>unit</code>); key background height &amp; width inherit from
 <code>legend.key.size</code> or can be specified separately</p></dd>
 
@@ -437,65 +225,10 @@ it covers tick marks and grid lines. This should be used with
 <code>fill = NA</code>
 (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_rect()</a></code>; inherits from <code>rect</code>)</p></dd>
 
-    <dt><code>panel.spacing</code></dt>
+    <dt><code>panel.spacing,panel.spacing.x,panel.spacing.y</code></dt>
 <dd><p>spacing between facet
 panels (<code>unit</code>). <code>panel.spacing.x</code> &amp; <code>panel.spacing.y</code> inherit from <code>panel.spacing</code>
 or can be specified separately.</p></dd>
-
-    <dt><code>panel.spacing.x</code></dt>
-<dd><p>spacing between facet
-panels (<code>unit</code>). <code>panel.spacing.x</code> &amp; <code>panel.spacing.y</code> inherit from <code>panel.spacing</code>
-or can be specified separately.</p></dd>
-
-    <dt><code>panel.spacing.y</code></dt>
-<dd><p>spacing between facet
-panels (<code>unit</code>). <code>panel.spacing.x</code> &amp; <code>panel.spacing.y</code> inherit from <code>panel.spacing</code>
-or can be specified separately.</p></dd>
-
-    <dt><code>panel.grid</code></dt>
-<dd><p>grid lines (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify major grid lines,
-or minor grid lines separately (using <code>panel.grid.major</code> or <code>panel.grid.minor</code>)
-or individually for each axis (using <code>panel.grid.major.x</code>, <code>panel.grid.minor.x</code>,
-<code>panel.grid.major.y</code>, <code>panel.grid.minor.y</code>).  Y axis grid lines are horizontal
-and x axis grid lines are vertical. <code>panel.grid.*.*</code> inherits from
-<code>panel.grid.*</code> which inherits from <code>panel.grid</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>panel.grid.major</code></dt>
-<dd><p>grid lines (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify major grid lines,
-or minor grid lines separately (using <code>panel.grid.major</code> or <code>panel.grid.minor</code>)
-or individually for each axis (using <code>panel.grid.major.x</code>, <code>panel.grid.minor.x</code>,
-<code>panel.grid.major.y</code>, <code>panel.grid.minor.y</code>).  Y axis grid lines are horizontal
-and x axis grid lines are vertical. <code>panel.grid.*.*</code> inherits from
-<code>panel.grid.*</code> which inherits from <code>panel.grid</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>panel.grid.major.x</code></dt>
-<dd><p>grid lines (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify major grid lines,
-or minor grid lines separately (using <code>panel.grid.major</code> or <code>panel.grid.minor</code>)
-or individually for each axis (using <code>panel.grid.major.x</code>, <code>panel.grid.minor.x</code>,
-<code>panel.grid.major.y</code>, <code>panel.grid.minor.y</code>).  Y axis grid lines are horizontal
-and x axis grid lines are vertical. <code>panel.grid.*.*</code> inherits from
-<code>panel.grid.*</code> which inherits from <code>panel.grid</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>panel.grid.minor.x</code></dt>
-<dd><p>grid lines (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify major grid lines,
-or minor grid lines separately (using <code>panel.grid.major</code> or <code>panel.grid.minor</code>)
-or individually for each axis (using <code>panel.grid.major.x</code>, <code>panel.grid.minor.x</code>,
-<code>panel.grid.major.y</code>, <code>panel.grid.minor.y</code>).  Y axis grid lines are horizontal
-and x axis grid lines are vertical. <code>panel.grid.*.*</code> inherits from
-<code>panel.grid.*</code> which inherits from <code>panel.grid</code>, which in turn inherits
-from <code>line</code></p></dd>
-
-    <dt><code>panel.grid.minor.y</code></dt>
-<dd><p>grid lines (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_line()</a></code>). Specify major grid lines,
-or minor grid lines separately (using <code>panel.grid.major</code> or <code>panel.grid.minor</code>)
-or individually for each axis (using <code>panel.grid.major.x</code>, <code>panel.grid.minor.x</code>,
-<code>panel.grid.major.y</code>, <code>panel.grid.minor.y</code>).  Y axis grid lines are horizontal
-and x axis grid lines are vertical. <code>panel.grid.*.*</code> inherits from
-<code>panel.grid.*</code> which inherits from <code>panel.grid</code>, which in turn inherits
-from <code>line</code></p></dd>
 
     <dt><code>panel.ontop</code></dt>
 <dd><p>option to place the panel (background, gridlines) over
@@ -506,7 +239,7 @@ the data layers (<code>logical</code>). Usually used with a transparent or blank
 <dd><p>background of the entire plot (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_rect()</a></code>;
 inherits from <code>rect</code>)</p></dd>
 
-    <dt><code>plot.caption.position</code></dt>
+    <dt><code>plot.title.position,plot.caption.position</code></dt>
 <dd><p>Alignment of the plot title/subtitle
 and caption.  The setting for <code>plot.title.position</code> applies to both
 the title and the subtitle. A value of "panel" (the default) means that
@@ -532,36 +265,12 @@ inherits from <code>title</code>) left-aligned by default</p></dd>
 or a coordinate. If a string, extra space will be added to accommodate the
 tag.</p></dd>
 
-    <dt><code>strip.background.x</code></dt>
-<dd><p>background of facet labels (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_rect()</a></code>;
-inherits from <code>rect</code>). Horizontal facet background (<code>strip.background.x</code>)
-&amp; vertical facet background (<code>strip.background.y</code>) inherit from
-<code>strip.background</code> or can be specified separately</p></dd>
-
-    <dt><code>strip.background.y</code></dt>
-<dd><p>background of facet labels (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_rect()</a></code>;
-inherits from <code>rect</code>). Horizontal facet background (<code>strip.background.x</code>)
-&amp; vertical facet background (<code>strip.background.y</code>) inherit from
-<code>strip.background</code> or can be specified separately</p></dd>
-
     <dt><code>strip.placement</code></dt>
 <dd><p>placement of strip with respect to axes,
 either "inside" or "outside". Only important when axes and strips are
 on the same side of the plot.</p></dd>
 
-    <dt><code>strip.text</code></dt>
-<dd><p>facet labels (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>;
-inherits from  <code>text</code>). Horizontal facet labels (<code>strip.text.x</code>) &amp; vertical
-facet labels (<code>strip.text.y</code>) inherit from <code>strip.text</code> or can be specified
-separately</p></dd>
-
-    <dt><code>strip.text.x</code></dt>
-<dd><p>facet labels (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>;
-inherits from  <code>text</code>). Horizontal facet labels (<code>strip.text.x</code>) &amp; vertical
-facet labels (<code>strip.text.y</code>) inherit from <code>strip.text</code> or can be specified
-separately</p></dd>
-
-    <dt><code>strip.text.y</code></dt>
+    <dt><code>strip.text,strip.text.x,strip.text.y</code></dt>
 <dd><p>facet labels (<code><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text()</a></code>;
 inherits from  <code>text</code>). Horizontal facet labels (<code>strip.text.x</code>) &amp; vertical
 facet labels (<code>strip.text.y</code>) inherit from <code>strip.text</code> or can be specified
@@ -587,12 +296,17 @@ elements.</p></dd>
 
   
 </dl></dd>
+
+
 <dt>axis.title</dt>
 <dd><p>same as in theme(), but with a default of `element_blank()`.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>a ggtheme object</p>
+    
+
+<p>a ggtheme object</p>
     </div>
     <div id="details">
     <h2>Details</h2>
@@ -622,59 +336,59 @@ to be registered at package load.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># NB when `theme_ptrr()` is used in these examples, fonts</span></span>
-<span class="r-in"><span class="co"># are set to 'sans' to pass checks on computers without the</span></span>
-<span class="r-in"><span class="co"># sans included. If you have these fonts (see Note) you can</span></span>
-<span class="r-in"><span class="co"># leave these parameters at their default values.</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># the basic plot for illustration, theme not used</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Lots of cars"</span>, subtitle <span class="op">=</span> <span class="st">"Count of numbers"</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># using `theme_ptrr()` defaults</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">p</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu">theme_ptrr</span><span class="op">(</span><span class="st">"x"</span>, family <span class="op">=</span> <span class="st">"sans"</span>, title_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># NB when `theme_ptrr()` is used in these examples, fonts</span></span></span>
+<span class="r-in"><span><span class="co"># are set to 'sans' to pass checks on computers without the</span></span></span>
+<span class="r-in"><span><span class="co"># sans included. If you have these fonts (see Note) you can</span></span></span>
+<span class="r-in"><span><span class="co"># leave these parameters at their default values.</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># the basic plot for illustration, theme not used</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">class</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Lots of cars"</span>, subtitle <span class="op">=</span> <span class="st">"Count of numbers"</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># using `theme_ptrr()` defaults</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">p</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu">theme_ptrr</span><span class="op">(</span><span class="st">"x"</span>, family <span class="op">=</span> <span class="st">"sans"</span>, title_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="theme_ptrr-1.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># in combination with `flush_axis`:</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">p</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu">theme_ptrr</span><span class="op">(</span><span class="st">"x"</span>, family <span class="op">=</span> <span class="st">"sans"</span>, title_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_x_continuous</a></span><span class="op">(</span>expand <span class="op">=</span> <span class="va">flush_axis</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># in combination with `flush_axis`:</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">p</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu">theme_ptrr</span><span class="op">(</span><span class="st">"x"</span>, family <span class="op">=</span> <span class="st">"sans"</span>, title_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_x_continuous</a></span><span class="op">(</span>expand <span class="op">=</span> <span class="va">flush_axis</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="theme_ptrr-2.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># scatter</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">cty</span>, <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu">theme_ptrr</span><span class="op">(</span><span class="st">"scatter"</span>, family <span class="op">=</span> <span class="st">"sans"</span>, title_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Lots of cars"</span>, subtitle <span class="op">=</span> <span class="st">"Point by point"</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># scatter</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">cty</span>, <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu">theme_ptrr</span><span class="op">(</span><span class="st">"scatter"</span>, family <span class="op">=</span> <span class="st">"sans"</span>, title_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Lots of cars"</span>, subtitle <span class="op">=</span> <span class="st">"Point by point"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="theme_ptrr-3.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># Smaller text, flush alignment</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">cty</span>, <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu">theme_ptrr</span><span class="op">(</span><span class="st">"scatter"</span>, base_size <span class="op">=</span> <span class="fl">9</span>, margin_side <span class="op">=</span> <span class="fl">0</span>,</span>
-<span class="r-in">                family <span class="op">=</span> <span class="st">"sans"</span>, title_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Lots of cars"</span>, subtitle <span class="op">=</span> <span class="st">"Point by point"</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Smaller text, flush alignment</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">cty</span>, <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu">theme_ptrr</span><span class="op">(</span><span class="st">"scatter"</span>, base_size <span class="op">=</span> <span class="fl">9</span>, margin_side <span class="op">=</span> <span class="fl">0</span>,</span></span>
+<span class="r-in"><span>                family <span class="op">=</span> <span class="st">"sans"</span>, title_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Lots of cars"</span>, subtitle <span class="op">=</span> <span class="st">"Point by point"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="theme_ptrr-4.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># Override defaults changed inside `theme_ptrr()`</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">cty</span>, <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu">theme_ptrr</span><span class="op">(</span><span class="st">"scatter"</span>, base_size <span class="op">=</span> <span class="fl">9</span>, margin_side <span class="op">=</span> <span class="fl">0</span>,</span>
-<span class="r-in">               family <span class="op">=</span> <span class="st">"sans"</span>, title_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Lots of cars"</span>, subtitle <span class="op">=</span> <span class="st">"Point by point"</span><span class="op">)</span> <span class="op">+</span></span>
-<span class="r-in">  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_rect</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"lightpink"</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Override defaults changed inside `theme_ptrr()`</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">cty</span>, <span class="va">hwy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu">theme_ptrr</span><span class="op">(</span><span class="st">"scatter"</span>, base_size <span class="op">=</span> <span class="fl">9</span>, margin_side <span class="op">=</span> <span class="fl">0</span>,</span></span>
+<span class="r-in"><span>               family <span class="op">=</span> <span class="st">"sans"</span>, title_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Lots of cars"</span>, subtitle <span class="op">=</span> <span class="st">"Point by point"</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_rect</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"lightpink"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="theme_ptrr-5.png" alt="" width="700" height="433"></span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -689,7 +403,7 @@ to be registered at package load.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

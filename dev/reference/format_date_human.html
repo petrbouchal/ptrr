@@ -19,7 +19,7 @@ remember format codes. Defaults are geared towards Czech-locale dates."><meta na
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ptrr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.1.9000</span>
       </span>
     </div>
 
@@ -63,51 +63,62 @@ remember format codes. Defaults are geared towards Czech-locale dates.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">format_date_human</span><span class="op">(</span>
-  date <span class="op">=</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu">now</span><span class="op">(</span><span class="op">)</span>,
-  month_format <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"long"</span>, <span class="st">"short"</span>, <span class="st">"number"</span><span class="op">)</span>,
-  year_format <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"long"</span>, <span class="st">"short"</span><span class="op">)</span>,
-  locale <span class="op">=</span> <span class="st">"cs_CZ.UTF-8"</span>,
-  day_dot <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">format_date_human</span><span class="op">(</span></span>
+<span>  date <span class="op">=</span> <span class="fu">lubridate</span><span class="fu">::</span><span class="fu">now</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  month_format <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"long"</span>, <span class="st">"short"</span>, <span class="st">"number"</span><span class="op">)</span>,</span>
+<span>  year_format <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"long"</span>, <span class="st">"short"</span><span class="op">)</span>,</span>
+<span>  locale <span class="op">=</span> <span class="st">"cs_CZ.UTF-8"</span>,</span>
+<span>  day_dot <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>date</dt>
 <dd><p>a date, object of class POSIXct. Defaults to lubridate::now()</p></dd>
+
+
 <dt>month_format</dt>
 <dd><p>Month format. `"long"` for full month name (the default),
 `"short"` for month abbreviation, or `"number"` for numeric.</p></dd>
+
+
 <dt>year_format</dt>
 <dd><p>`"long"` for 4-digit (default), `"short"` for 2-digit.</p></dd>
+
+
 <dt>locale</dt>
 <dd><p>Locale string. Defaults to `"cs_CZ.UTF-8"`</p></dd>
+
+
 <dt>day_dot</dt>
 <dd><p>Whether to put a dot after the day. Defaults to TRUE.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>a string of same length as input</p>
+    
+
+<p>a string of same length as input</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">format_date_human</span><span class="op">(</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">format_date_human</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in loadNamespace(x):</span> there is no package called ‘dplyr’</span>
-<span class="r-in"><span class="fu">format_date_human</span><span class="op">(</span>month_format <span class="op">=</span> <span class="st">"short"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">format_date_human</span><span class="op">(</span>month_format <span class="op">=</span> <span class="st">"short"</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in loadNamespace(x):</span> there is no package called ‘dplyr’</span>
-<span class="r-in"><span class="fu">format_date_human</span><span class="op">(</span>month_format <span class="op">=</span> <span class="st">"number"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">format_date_human</span><span class="op">(</span>month_format <span class="op">=</span> <span class="st">"number"</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in loadNamespace(x):</span> there is no package called ‘dplyr’</span>
-<span class="r-in"><span class="fu">format_date_human</span><span class="op">(</span>year_format <span class="op">=</span> <span class="st">"long"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">format_date_human</span><span class="op">(</span>year_format <span class="op">=</span> <span class="st">"long"</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in loadNamespace(x):</span> there is no package called ‘dplyr’</span>
-<span class="r-in"><span class="fu">format_date_human</span><span class="op">(</span>month_format <span class="op">=</span> <span class="st">"short"</span>, locale <span class="op">=</span> <span class="st">"fr_FR"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">format_date_human</span><span class="op">(</span>month_format <span class="op">=</span> <span class="st">"short"</span>, locale <span class="op">=</span> <span class="st">"fr_FR"</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in loadNamespace(x):</span> there is no package called ‘dplyr’</span>
-<span class="r-in"><span class="fu">format_date_human</span><span class="op">(</span>month_format <span class="op">=</span> <span class="st">"short"</span>, locale <span class="op">=</span> <span class="st">"en_US"</span>, day_dot <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">format_date_human</span><span class="op">(</span>month_format <span class="op">=</span> <span class="st">"short"</span>, locale <span class="op">=</span> <span class="st">"en_US"</span>, day_dot <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in loadNamespace(x):</span> there is no package called ‘dplyr’</span>
-<span class="r-in"><span class="fu">format_date_human</span><span class="op">(</span>date <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu">lubridate</span><span class="fu">::</span><span class="fu">now</span><span class="op">(</span><span class="op">)</span>,</span>
-<span class="r-in">                           <span class="fu">lubridate</span><span class="fu">::</span><span class="fu">now</span><span class="op">(</span><span class="op">)</span> <span class="op">-</span> <span class="fl">100000</span><span class="op">)</span>,</span>
-<span class="r-in">                  month_format <span class="op">=</span> <span class="st">"short"</span>, locale <span class="op">=</span> <span class="st">"fr_FR"</span>, day_dot <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">format_date_human</span><span class="op">(</span>date <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu">lubridate</span><span class="fu">::</span><span class="fu">now</span><span class="op">(</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                           <span class="fu">lubridate</span><span class="fu">::</span><span class="fu">now</span><span class="op">(</span><span class="op">)</span> <span class="op">-</span> <span class="fl">100000</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>                  month_format <span class="op">=</span> <span class="st">"short"</span>, locale <span class="op">=</span> <span class="st">"fr_FR"</span>, day_dot <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in loadNamespace(x):</span> there is no package called ‘dplyr’</span>
 </code></pre></div>
     </div>
@@ -123,7 +134,7 @@ remember format codes. Defaults are geared towards Czech-locale dates.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

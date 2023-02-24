@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ptrr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.1.9000</span>
       </span>
     </div>
 
@@ -59,7 +59,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">gh_url</span><span class="op">(</span><span class="va">path</span>, <span class="va">repo</span>, user <span class="op">=</span> <span class="st">"petrbouchal"</span>, remote <span class="op">=</span> <span class="cn">NULL</span>, branch <span class="op">=</span> <span class="st">"main"</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">gh_url</span><span class="op">(</span><span class="va">path</span>, <span class="va">repo</span>, user <span class="op">=</span> <span class="st">"petrbouchal"</span>, remote <span class="op">=</span> <span class="cn">NULL</span>, branch <span class="op">=</span> <span class="st">"main"</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -67,19 +67,32 @@
     <dl><dt>path</dt>
 <dd><p>path to file (the bit that goes after /tree/branch,
 so presumably the local path from project root)</p></dd>
+
+
 <dt>repo</dt>
 <dd><p>repo name; used if `remote` is not provided.</p></dd>
+
+
 <dt>user</dt>
 <dd><p>Github user; used if `remote` is not provided. Defaults to `"petrbouchal"`</p></dd>
+
+
 <dt>remote</dt>
 <dd><p>remote in the form of user/repo.</p></dd>
+
+
 <dt>branch</dt>
 <dd><p>branch. Default `"main"`</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>character vector of same length as inputs
-Inputs are recycled if not all of the same length</p>
+    
+
+<p>character vector of same length as inputs</p>
+
+
+<p>Inputs are recycled if not all of the same length</p>
     </div>
 
   </div>
@@ -94,7 +107,7 @@ Inputs are recycled if not all of the same length</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

@@ -20,7 +20,7 @@ YAML option"><meta name="robots" content="noindex"><!-- mathjax --><script src="
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ptrr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.1.9000</span>
       </span>
     </div>
 
@@ -65,28 +65,31 @@ YAML option</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">ptrr_word</span><span class="op">(</span>
-  reference_docx <span class="op">=</span> <span class="fu">find_resource</span><span class="op">(</span><span class="st">"ptrr_word"</span>, <span class="st">"template.docx"</span><span class="op">)</span>,
-  number_sections <span class="op">=</span> <span class="cn">FALSE</span>,
-  <span class="va">...</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">ptrr_word</span><span class="op">(</span></span>
+<span>  reference_docx <span class="op">=</span> <span class="fu">find_resource</span><span class="op">(</span><span class="st">"ptrr_word"</span>, <span class="st">"template.docx"</span><span class="op">)</span>,</span>
+<span>  number_sections <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>...</dt>
 <dd><p>Arguments to be passed to `[bookdown::word_document2]`</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A modified `word_document2` with the standard ptrr formatting.</p>
+    
+
+<p>A modified `word_document2` with the standard ptrr formatting.</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in">  <span class="va">output</span><span class="op">:</span> <span class="fu">ptrr</span><span class="fu">::</span><span class="va">ptrr_word</span></span>
-<span class="r-in"><span class="op">}</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span>  <span class="va">output</span><span class="op">:</span> <span class="fu">ptrr</span><span class="fu">::</span><span class="va">ptrr_word</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -101,7 +104,7 @@ YAML option</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
