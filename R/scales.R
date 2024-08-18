@@ -18,9 +18,6 @@ hrbrthemes::scale_x_percent
 #' @importFrom hrbrthemes scale_y_percent
 #' @export
 hrbrthemes::scale_y_percent
-#' @importFrom hrbrthemes gg_check
-#' @export
-hrbrthemes::gg_check
 
 #' Continuous scales with Czech percent labels
 #'

@@ -11,6 +11,10 @@ ptrr_word(
 )
 }
 \arguments{
+\item{reference_docx}{Reference docx file to use, defaults to file included in package.}
+
+\item{number_sections}{Whether to number sections, defaults to FALSE.}
+
 \item{...}{Arguments to be passed to `[bookdown::word_document2]`}
 }
 \value{

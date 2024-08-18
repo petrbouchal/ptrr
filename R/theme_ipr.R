@@ -21,7 +21,7 @@
 #'
 #'
 #' @param grid character: which major gridlines to display. "x", "y" or "both". Defaults to "both".
-#' @param richtext whether to render markdown/HTML using the `ggtext` package. Defaults to FALSE.
+#' @param richtext whether to render markdown/HTML using the `marquee` package. Defaults to FALSE.
 #' @param axis_titles whether to display axis titles. Defaults to FALSE.
 #' @param scatter If TRUE, will add panel background and inverse x and y gridlines. Defaults to FALSE.
 #' @param base_size base font size. Defaults to 12.
@@ -37,10 +37,23 @@ theme_ipr <- function(grid = "both", richtext = F, axis_titles = F, scatter = F,
                       base_size = 12, family = "Unit Pro", title_family = "Unit Slab Pro", side_margin = 5.5) {
 
   if(richtext) {
-    if(!requireNamespace("ggtext")) stop("Package ggtext needed.")
+    if(!requireNamespace("marquee")) stop("Package marquee needed.")
   }
 
-  element_switch <- if(richtext) ggtext::element_markdown else ggplot2::element_text
+  element_switch <- if (!richtext) {
+    function(...) {
+      funArgs <-  list(...)
+      # remove style argument if not using richtext, dont pass it to element_text
+      newArgs <- funArgs[is.na(match(names(funArgs), "style"))]
+      do.call(ggplot2::element_text, newArgs)
+    }
+  }  else {
+    function(...) {
+      funArgs <-  list(...)
+      do.call(marquee::element_marquee, funArgs)
+    }
+  }
+
   x <- ggplot2::theme_minimal(base_size = base_size) +
     ggplot2::theme(text = element_switch(size = base_size, family = family),
           strip.text = element_switch(hjust = 0, family = family),

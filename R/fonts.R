@@ -2,7 +2,7 @@
 #'
 #' Wrapper around update_geom_font_defaults(), different default
 #'
-#' @param font font, defaults to `"IBM Plex Sans"`
+#' @param family font, defaults to `"IBM Plex Sans"`
 #' @param fontface face, defaults to `"plain"`
 #' @param size size, defaults to 3.5
 #' @param lineheight lineheight, defaults to 0.95

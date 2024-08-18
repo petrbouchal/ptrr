@@ -3,12 +3,15 @@
 #'
 #' FUNCTION_DESCRIPTION
 #'
-#' @param  DESCRIPTION.
+#' @param file DESCRIPTION.
+#' @param template DESCRIPTION.
+#' @param package  DESCRIPTION.
+#' @param edit DESCRIPTION.
 #'
 #' @return RETURN_DESCRIPTION
 #' @examples
 #' # ADD_EXAMPLES_HERE
-use_ptrr_docs <- function() {
+use_ptrr_docs <- function(file = "docs", template = "docs", package = "ptrr", edit = FALSE) {
   rmarkdown::draft(file = "docs",
                    template = "docs",
                    package = "ptrr",

@@ -4,7 +4,8 @@
 #' specify using the standard ptrr word document formatting. By default,
 #' it uses the Word template built into the package as the `reference_docx`
 #' YAML option
-#'
+#' @param reference_docx Reference docx file to use, defaults to file included in package.
+#' @param number_sections Whether to number sections, defaults to FALSE.
 #' @param ... Arguments to be passed to `[bookdown::word_document2]`
 #'
 #' @return A modified `word_document2` with the standard ptrr formatting.

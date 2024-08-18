@@ -45,14 +45,18 @@ ptclr_l <- "#e3f1ff"
 #' to be registered at package load.
 #'
 #' @param base_size Numeric text size in pts, affects all text in plot. Defaults to 11.
+#' @param richtext Whether to render labels using marquee. Defaults to FALSE.
+#' @param richtext_style Marquee style object to use in richtext fields
 #' @param gridlines Whether to display major gridlines along `"y"` (the default),
 #' `"x"`, `"both"`, or draw a `"scatter"`, which has both gridlines and inverted colours.
 #' @param family,title_family font family to use for the (title of the) plot. Defaults to `"IBM Plex Sans"` for title and `"IBM Plex Sans Condensed"` for plot.
 #' @param margin_side,margin_bottom size of left and right / bottom margin around plot, in pts. Defaults to 6. Set to 0 to align flush with text in a Word document.
 #' @param plot.title.position where to align the title. Either "plot" (the default, difference from `theme()` default) or `"panel"`.
 #' @param axis_titles whether to display axis titles: `"none"` (default), `"x"`, `"y"`, or `"both"`.
+#' @param tonecol Color for panel/plot background.
 #' @param multiplot if set to TRUE, provides better styling for small multiples created using `facet_*`.
 #' @param map if set to TRUE, provides better styling for maps created using `geom_sf()`. Overrides `gridlines`.
+#' @param inverse Create plot with plot background in tonecol and white panel bg.
 #' @inheritDotParams ggplot2::theme -text -plot.title -panel.grid.minor
 #'   -panel.grid.major.x -panel.grid.major.y -panel.background -axis.title
 #'   -strip.text.x -plot.margin -strip.background
@@ -144,8 +148,8 @@ theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter", "none"),
   }
 
   grd <- match.arg(gridlines)
-  if(axis_titles == TRUE) axis_titles <- "both"
-  if(axis_titles == FALSE) axis_titles <- "none"
+  if(isTRUE(axis_titles)) axis_titles <- "both"
+  if(isFALSE(axis_titles)) axis_titles <- "none"
   axttl <- match.arg(axis_titles)
 
   grid_col <- if(grd == "scatter" | multiplot) "white" else tonecol
@@ -208,7 +212,7 @@ theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter", "none"),
                    axis.title.y = if(axttl == "both" | axttl == "y") element_switch() else ggplot2::element_blank(),
                    strip.text.x = element_switch(hjust = 0, style = richtext_style),
                    strip.text.y = element_switch(hjust = 0, style = richtext_style),
-                   plot.background = element_rect(fill = plot_bg_col, colour = NA),
+                   plot.background = ggplot2::element_rect(fill = plot_bg_col, colour = NA),
                    axis.text.x = element_switch(style = richtext_style),
                    axis.text.y = element_switch(style = richtext_style),
                    plot.margin = ggplot2::unit(c(10, margin_side + 5,

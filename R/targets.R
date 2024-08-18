@@ -4,7 +4,7 @@ use_tar_interactive <- function(variables) {
 
 use_targets_deps <- function(cran = TRUE) {
   if (cran) {
-     install.packages("targets",
+     utils::install.packages("targets",
                       dependencies = TRUE)
   }  else {
     if(!require("remotes")) stop("Needs remotes package")

@@ -13,6 +13,8 @@ set_ptrr_ggplot_fonts(
 )
 }
 \arguments{
+\item{family}{font, defaults to `"IBM Plex Sans"`}
+
 \item{fontface}{face, defaults to `"plain"`}
 
 \item{size}{size, defaults to 3.5}
@@ -20,8 +22,6 @@ set_ptrr_ggplot_fonts(
 \item{color}{color, defaults to "black"}
 
 \item{lineheight}{lineheight, defaults to 0.95}
-
-\item{font}{font, defaults to `"IBM Plex Sans"`}
 }
 \description{
 Wrapper around update_geom_font_defaults(), different default

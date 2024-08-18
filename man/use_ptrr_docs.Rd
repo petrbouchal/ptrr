@@ -4,10 +4,16 @@
 \alias{use_ptrr_docs}
 \title{FUNCTION_TITLE}
 \usage{
-use_ptrr_docs()
+use_ptrr_docs(file = "docs", template = "docs", package = "ptrr", edit = FALSE)
 }
 \arguments{
-\item{DESCRIPTION.}{}
+\item{file}{DESCRIPTION.}
+
+\item{template}{DESCRIPTION.}
+
+\item{package}{DESCRIPTION.}
+
+\item{edit}{DESCRIPTION.}
 }
 \value{
 RETURN_DESCRIPTION

@@ -24,9 +24,12 @@ Language: en
 RoxygenNote: 7.3.2
 Suggests: 
     ragg (>= 1.1.0),
+    bookdown,
+    fs,
     rmarkdown (>= 2.7),
     knitr (>= 1.31),
     marquee,
     dplyr,
     lubridate,
-    stringr
+    stringr,
+    remotes

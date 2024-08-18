@@ -18,7 +18,7 @@ theme_ipr(
 \arguments{
 \item{grid}{character: which major gridlines to display. "x", "y" or "both". Defaults to "both".}
 
-\item{richtext}{whether to render markdown/HTML using the `ggtext` package. Defaults to FALSE.}
+\item{richtext}{whether to render markdown/HTML using the `marquee` package. Defaults to FALSE.}
 
 \item{axis_titles}{whether to display axis titles. Defaults to FALSE.}
 

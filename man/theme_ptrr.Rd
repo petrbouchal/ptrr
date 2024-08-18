@@ -32,13 +32,21 @@ theme_ptrr(
 
 \item{multiplot}{if set to TRUE, provides better styling for small multiples created using `facet_*`.}
 
+\item{tonecol}{Color for panel/plot background.}
+
 \item{margin_side, margin_bottom}{size of left and right / bottom margin around plot, in pts. Defaults to 6. Set to 0 to align flush with text in a Word document.}
 
 \item{plot.title.position}{where to align the title. Either "plot" (the default, difference from `theme()` default) or `"panel"`.}
 
 \item{axis_titles}{whether to display axis titles: `"none"` (default), `"x"`, `"y"`, or `"both"`.}
 
+\item{richtext}{Whether to render labels using marquee. Defaults to FALSE.}
+
+\item{richtext_style}{Marquee style object to use in richtext fields}
+
 \item{map}{if set to TRUE, provides better styling for maps created using `geom_sf()`. Overrides `gridlines`.}
+
+\item{inverse}{Create plot with plot background in tonecol and white panel bg.}
 
 \item{...}{
   Arguments passed on to \code{\link[ggplot2:theme]{ggplot2::theme}}
