@@ -150,7 +150,7 @@ Use \code{NA} to refer to the existing minimum or maximum.}
 value should missing be displayed as? Does not apply to position scales
 where \code{NA} is always placed at the far right.}
 
-\item{trans}{Either the name of a transformation object, or the
+\item{trans}{(DEPRECATED) Either the name of a transformation object, or the
 object itself. Built-in transformations include "asn", "atanh",
 "boxcox", "exp", "identity", "log", "log10", "log1p", "log2",
 "logit", "probability", "probit", "reciprocal", "reverse" and "sqrt".}

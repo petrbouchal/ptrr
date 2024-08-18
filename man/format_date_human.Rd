@@ -38,8 +38,8 @@ format_date_human(month_format = "short")
 format_date_human(month_format = "number")
 format_date_human(year_format = "long")
 format_date_human(month_format = "short", locale = "fr_FR")
-format_date_human(month_format = "short", locale = "en_US", day_dot = F)
+format_date_human(month_format = "short", locale = "en_US", day_dot = FALSE)
 format_date_human(date = c(lubridate::now(),
                            lubridate::now() - 100000),
-                  month_format = "short", locale = "fr_FR", day_dot = F)
+                  month_format = "short", locale = "fr_FR", day_dot = FALSE)
 }
