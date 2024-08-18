@@ -21,9 +21,12 @@ Imports:
     magrittr
 Encoding: UTF-8
 Language: en
-RoxygenNote: 7.2.1
+RoxygenNote: 7.3.2
 Suggests: 
     ragg (>= 1.1.0),
     rmarkdown (>= 2.7),
     knitr (>= 1.31),
-    ggtext (>= 0.1.1)
+    marquee,
+    dplyr,
+    lubridate,
+    stringr

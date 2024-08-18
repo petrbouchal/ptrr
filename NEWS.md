@@ -1,7 +1,13 @@
 # ptrr (development version)
 
-* `{ggtext}` now only in Suggests
+
+## New features and impromvements
+
+* switch to `{marquee}` for rich text labeling
+* new `inverse` param in `theme_ptrr()` to create plot with light background and white panels
+* axis_titles now takes a character, one of "both", "none", "x" or "y" in addition TRUE and FALSE (which work like "both" and "none", respectively)
 * `ggsave_*` functions for Twitter and Facebook images
+
 
 # ptrr 0.2.1
 
