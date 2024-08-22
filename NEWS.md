@@ -1,4 +1,4 @@
-# ptrr (development version)
+# ptrr 0.2.2
 
 
 ## New features and impromvements
