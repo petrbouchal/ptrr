@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">ptrr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.1.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.2.2.9000</span>
       </span>
     </div>
 
@@ -91,10 +91,8 @@
 <li>
 <code>ggplot2</code> themes</li>
 <li>
-<code>drat</code> utilities</li>
-<li>
 <code>precommit</code> recipes</li>
-<li>font import utilities</li>
+<li>fonts and font registration wrappers</li>
 <li>number, date and scale formatting functions</li>
 <li>Rmd templates and related utilities for repo doc, xaringan slides, and Rmd webpage</li>
 </ul>
@@ -103,16 +101,10 @@
 </h2>
 <p>You can install the latest release of ptrr from <a href="https://github.com" class="external-link">Github</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"petrbouchal/ptrr"</span>, ref <span class="op">=</span> <span class="fu">github_release</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"petrbouchal/ptrr"</span>, ref <span class="op">=</span> <span class="fu">github_release</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>The current development version is at</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"petrbouchal/ptrr"</span><span class="op">)</span></span></code></pre></div>
-<p>There are also binaries in the <code>petrbouchal/drat</code> repo; this can be installed with</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ptrr"</span>, repos <span class="op">=</span> <span class="st">"https://petrbouchal.github.io/drat"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Installing package into '/Users/petr/Library/R/4.0/library'</span></span>
-<span><span class="co">#&gt; (as 'lib' is unspecified)</span></span>
-<span><span class="co">#&gt; installing the source package 'ptrr'</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"petrbouchal/ptrr"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="todo">TODO<a class="anchor" aria-label="anchor" href="#todo"></a>
@@ -120,7 +112,6 @@
 <ul>
 <li>rounding function <a href="https://twitter.com/hspter/status/314858331598626816" class="external-link uri">https://twitter.com/hspter/status/314858331598626816</a>
 </li>
-<li>Czech scales</li>
 <li>Czech units</li>
 </ul>
 </div>
