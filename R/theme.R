@@ -167,7 +167,11 @@ theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter", "none"),
     plot_bg_col <- tonecol
     bg_col <- "white"
     grid_col <- tonecol
-  } else if (!inverse == TRUE & grd == "scatter") {
+  } else if (inverse == FALSE & multiplot == TRUE) {
+    plot_bg_col <- "white"
+    bg_col <- tonecol
+    grid_col <- "white"
+  } else if (inverse == FALSE & grd == "scatter") {
     plot_bg_col <- "white"
     bg_col <- tonecol
     grid_col <- "white"
