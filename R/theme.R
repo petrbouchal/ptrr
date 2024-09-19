@@ -152,34 +152,35 @@ theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter", "none"),
   if(isFALSE(axis_titles)) axis_titles <- "none"
   axttl <- match.arg(axis_titles)
 
-  grid_col <- if(grd == "scatter" | multiplot) "white" else tonecol
-  bg_col <- if(grd == "scatter" | multiplot) tonecol else "white"
+  scatter <- grd == "scatter"
 
-  if(!inverse & grd != "scatter" & !multiplot) {
+  if        (!inverse & !scatter & !multiplot) {
+    plot_bg_col <- "white"
+    bg_col <- "white"
+  } else if (!inverse & !scatter & multiplot) {
     plot_bg_col <- "white"
     bg_col <- tonecol
-    grid_col <- "white"
-  } else if (inverse & (grd == "scatter" | multiplot)) {
+  } else if (!inverse & scatter & multiplot) {
+    plot_bg_col <- "white"
+    bg_col <- tonecol
+  } else if (!inverse & scatter & !multiplot) {
+    plot_bg_col <- "white"
+    bg_col <- tonecol
+  } else if (inverse & scatter & !multiplot) {
     plot_bg_col <- tonecol
     bg_col <- "white"
-    grid_col <- tonecol
-  } else if (inverse == TRUE) {
+  } else if (inverse & !scatter & multiplot) {
     plot_bg_col <- tonecol
     bg_col <- "white"
-    grid_col <- tonecol
-  } else if (inverse == FALSE & multiplot == TRUE) {
-    plot_bg_col <- "white"
+  } else if (inverse & !scatter & !multiplot) {
+    plot_bg_col <- tonecol
     bg_col <- tonecol
-    grid_col <- "white"
-  } else if (inverse == FALSE & grd == "scatter") {
-    plot_bg_col <- "white"
-    bg_col <- tonecol
-    grid_col <- "white"
-  } else {
-    plot_bg_col <- "white"
+  } else if (inverse & scatter & multiplot) {
+    plot_bg_col <- tonecol
     bg_col <- "white"
-    grid_col <- tonecol
   }
+
+  grid_col <- ifelse(bg_col == tonecol, "white", tonecol)
 
   if(is.null(richtext_style)) {
     richtext_style <- marquee::classic_style() |>
@@ -196,6 +197,8 @@ theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter", "none"),
     ggplot2::element_text(face = "bold", size = base_size * 1.2,
                           family = title_family)
   }
+
+  stripcol <- ifelse(multiplot, bg_col, plot_bg_col)
 
   element_gridline <- ggplot2::element_line(colour = grid_col, size = 0.3)
   thm <- ggplot2::theme_minimal(base_size = base_size, base_family = family) +
@@ -219,17 +222,10 @@ theme_ptrr <- function(gridlines = c("y", "x", "both", "scatter", "none"),
                    plot.background = ggplot2::element_rect(fill = plot_bg_col, colour = NA),
                    axis.text.x = element_switch(style = richtext_style),
                    axis.text.y = element_switch(style = richtext_style),
+                   strip.background = ggplot2::element_rect(fill = stripcol, colour = NA),
                    plot.margin = ggplot2::unit(c(10, margin_side + 5,
                                                  margin_bottom, margin_side),
                                                units = "pt"))
-  if(multiplot & !inverse) {thm <- thm +
-    ggplot2::theme(strip.background = ggplot2::element_rect(fill = tonecol,
-                                                            colour = NA))
-  } else if(multiplot & inverse) {
-    thm <- thm +
-      ggplot2::theme(strip.background = ggplot2::element_rect(fill = "white",
-                                                              colour = NA))
-  }
 
   if(map) thm <- thm +
     ggplot2::theme(panel.grid.major = ggplot2::element_blank(),

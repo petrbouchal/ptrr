@@ -17,13 +17,21 @@ ggplot(tibble::tibble(x = 1:100, y = (1:100)/100,
        subtitle = "{.greet Hello} _{.sheep dolly}_.",
        x = "{.sheep Blah}",
        caption = "And a caption") +
-  theme_ptrr(inverse = TRUE,
-             multiplot = TRUE,
-             richtext = TRUE,
-             gridlines = "scatter",
-             richtext_style = sss,
-             margin_side = 6,
-             margin_bottom = 0,
-             axis_titles = "x")
+  theme_ptrr(inverse = FALSE, richtext = TRUE, richtext_style = sss,
+             multiplot = FALSE, gridlines = "scatter")
 
 sss[[1]]
+
+ggplot(tibble::tibble(x = 1:100, y = (1:100)/100,
+                      z = rep(c("a", "b"), 50))) +
+  geom_point(aes(y, x)) +
+  scale_x_percent_cz() +
+  scale_y_number_cz() +
+  theme(plot.margin = unit(c(0, 12, 0, 0), "pt")) +
+  facet_wrap(~ z) +
+  labs(title = "Hello dolly",
+       subtitle = "Hello dolly.",
+       x = "Blah",
+       caption = "And a caption") +
+  theme_ptrr(inverse = TRUE, richtext = FALSE,,
+             multiplot = FALSE, gridlines = "scatter")
