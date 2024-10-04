@@ -14,10 +14,10 @@ set_ptrr_ggplot_fonts <- function(family = "IBM Plex Sans Condensed",
                                   fontface = "plain", size = 3.5, color = "black",
                                   lineheight = .95) {
 
-  update_geom_defaults("text", list(family = family, fontface = fontface,
+  ggplot2::update_geom_defaults("text", list(family = family, fontface = fontface,
                                     lineheight = lineheight,
                                     size = size, color = color))
-  update_geom_defaults("label", list(family = family, fontface = fontface,
+  ggplot2::update_geom_defaults("label", list(family = family, fontface = fontface,
                                      lineheight = lineheight,
                                      size = size, color = color))
 
