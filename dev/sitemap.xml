@@ -5,6 +5,7 @@
 <url><loc>http://petrbouchal.xyz/ptrr/index.html</loc></url>
 <url><loc>http://petrbouchal.xyz/ptrr/news/index.html</loc></url>
 <url><loc>http://petrbouchal.xyz/ptrr/reference/Colours.html</loc></url>
+<url><loc>http://petrbouchal.xyz/ptrr/reference/contrast.html</loc></url>
 <url><loc>http://petrbouchal.xyz/ptrr/reference/excel.html</loc></url>
 <url><loc>http://petrbouchal.xyz/ptrr/reference/flush_axis.html</loc></url>
 <url><loc>http://petrbouchal.xyz/ptrr/reference/format_date_human.html</loc></url>
@@ -25,10 +26,12 @@
 <url><loc>http://petrbouchal.xyz/ptrr/reference/scalescz.html</loc></url>
 <url><loc>http://petrbouchal.xyz/ptrr/reference/set_geom_defaults.html</loc></url>
 <url><loc>http://petrbouchal.xyz/ptrr/reference/set_ptrr_ggplot_fonts.html</loc></url>
+<url><loc>http://petrbouchal.xyz/ptrr/reference/tabulate_palette.html</loc></url>
 <url><loc>http://petrbouchal.xyz/ptrr/reference/theme_ipr.html</loc></url>
 <url><loc>http://petrbouchal.xyz/ptrr/reference/theme_ptrr.html</loc></url>
 <url><loc>http://petrbouchal.xyz/ptrr/reference/use_ptrr_docs.html</loc></url>
 <url><loc>http://petrbouchal.xyz/ptrr/reference/use_ptrr_site.html</loc></url>
 <url><loc>http://petrbouchal.xyz/ptrr/reference/use_ptrr_slides.html</loc></url>
+<url><loc>http://petrbouchal.xyz/ptrr/reference/vis_palette.html</loc></url>
 </urlset>
 
