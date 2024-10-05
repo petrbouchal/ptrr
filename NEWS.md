@@ -2,14 +2,18 @@
 
 # ptrr 0.2.2
 
-
 ## New features and impromvements
 
-* switch to `{marquee}` for rich text labeling
 * new `inverse` param in `theme_ptrr()` to create plot with light background and white panels
-* axis_titles now takes a character, one of "both", "none", "x" or "y" in addition TRUE and FALSE (which work like "both" and "none", respectively)
 * `ggsave_*` functions for Twitter and Facebook images
+* new functions to work with colour palettess:
+  - `tabulate_palette()` to turn a list of palettes into a data frame for easy export, with colour codes and names
+  - `vis_palette()` to visualise a list of palettes, showing their names, colour names and colour codes.
 
+## Updates and fixes
+
+* axis_titles now takes a character, one of "both", "none", "x" or "y" in addition TRUE and FALSE (which work like "both" and "none", respectively)
+* switch to `{marquee}` for rich text labeling
 
 # ptrr 0.2.1
 
